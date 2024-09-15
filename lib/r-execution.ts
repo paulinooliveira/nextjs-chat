@@ -5,10 +5,18 @@ import fs from 'fs/promises';
 initializeFetch();
 
 // Create an OpenCPU instance with default settings
-const opencpu = new OpenCPU();
+let opencpu: OpenCPU;
+
+try {
+  opencpu = new OpenCPU();
+  console.log('OpenCPU instance created successfully');
+} catch (error) {
+  console.error('Failed to create OpenCPU instance:', error);
+  throw error;
+}
 
 async function log(message: string) {
-  await fs.appendFile('r-execution-log.txt', message + '\n');
+  await fs.appendFile('r-execution-log.txt', `${new Date().toISOString()}: ${message}\n`);
   console.log(message);
 }
 
@@ -43,6 +51,11 @@ export async function executeRCode(input: string): Promise<string> {
     await log('Prepared arguments: ' + JSON.stringify(args));
     await log('Calling opencpuR with rCode: ' + rFunction);
 
+    // Check if the R function is properly formatted
+    if (!rFunction.trim().startsWith('function(') || !rFunction.includes('{')) {
+      throw new Error('Invalid R function format. It should be a proper R function definition.');
+    }
+
     // Execute the R code using the opencpu instance
     const result = await opencpu.call("do.call", { what: rFunction, args: args });
 
@@ -68,6 +81,25 @@ export async function executeRCode(input: string): Promise<string> {
       error: error instanceof Error ? error.message : 'An unknown error occurred',
       details: error
     });
+  }
+}
+
+/**
+ * Parses the result from executeRCode
+ * @param result - The JSON string returned by executeRCode
+ * @returns The parsed result object
+ */
+export function parseRResult(result: string): any {
+  try {
+    const parsedResult = JSON.parse(result);
+    if (parsedResult.error) {
+      console.error('Error in R execution:', parsedResult.error);
+      return { error: parsedResult.error, details: parsedResult.details };
+    }
+    return parsedResult;
+  } catch (error) {
+    console.error('Error parsing R result:', error);
+    return { error: 'Failed to parse R execution result', details: error };
   }
 }
 
