@@ -1,9 +1,42 @@
 import 'server-only'
 
-export { AI, type AIState, type UIState } from './ai-config'
-export { submitUserMessage } from './message-actions'
-export { executeRCode } from './r-execution'
-export { getUIStateFromAIState } from './ui-state'
+import { AI, type AIState, type UIState } from './ai-config'
+import { submitUserMessage } from './message-actions'
+import { executeRCode } from '../r-execution'
+import { getUIStateFromAIState } from './ui-state'
+import { Chat, Message } from '@/lib/types'
+import { nanoid } from 'nanoid'
 
-// Re-export any other necessary types or functions from the original file
-export type { Chat, Message } from '@/lib/types'
+export { AI, type AIState, type UIState, submitUserMessage, getUIStateFromAIState }
+export type { Chat, Message }
+
+export async function executeR(aiState: AIState, code: string): Promise<AIState> {
+  try {
+    const result = await executeRCode(code);
+    const parsedResult = JSON.parse(result);
+
+    const newMessage: Message = {
+      id: nanoid(),
+      role: 'assistant',
+      content: `R Execution Result:\n${parsedResult.result}\n\nConsole Output:\n${parsedResult.console}\n\nFiles Processed:\n${parsedResult.files}`
+    };
+
+    return {
+      ...aiState,
+      messages: [...aiState.messages, newMessage]
+    };
+  } catch (error) {
+    const errorMessage: Message = {
+      id: nanoid(),
+      role: 'assistant',
+      content: `Error executing R code: ${error.message}`
+    };
+
+    return {
+      ...aiState,
+      messages: [...aiState.messages, errorMessage]
+    };
+  }
+}
+
+// Add any other necessary functions or exports here

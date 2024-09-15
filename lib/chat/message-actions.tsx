@@ -10,7 +10,7 @@ import { openai } from '@ai-sdk/openai'
 import { z } from 'zod'
 import { BotMessage, SystemMessage } from '@/components/stocks/message'
 import { nanoid } from 'nanoid'
-import { executeRCode } from './r-execution'
+import { executeRCode, parseRResult } from '../r-execution'
 
 export async function submitUserMessage(content: string) {
   'use server'
@@ -186,6 +186,7 @@ function({{inputVariableNames salvas previamente, se houver}}) {
               rFunction
             })
           )
+          const parsedResult = parseRResult(result)
           aiState.done({
             ...aiState.get(),
             messages: [
@@ -210,14 +211,14 @@ function({{inputVariableNames salvas previamente, se houver}}) {
                     type: 'tool-result',
                     toolName: 'gptR',
                     toolCallId,
-                    result
+                    result: parsedResult
                   }
                 ]
               }
             ]
           })
           return (
-            <BotMessage content={`Executed R code and stored the result in ${outputVariableName}`} />
+            <BotMessage content={`Executed R code and stored the result in ${outputVariableName}. Result: ${JSON.stringify(parsedResult)}`} />
           )
         }
       }

@@ -22,18 +22,14 @@ export async function executeRCode(input: string): Promise<string> {
     console.log('Executing R code with input:', parsedInput);
     
     // TODO: Implement actual R code execution
-    // This should include:
-    // 1. Setting up a connection to an R environment (e.g., using r-script or a server-side R service)
-    // 2. Executing the R function with the provided inputs
-    // 3. Capturing the output and any console logs
-    // 4. Handling potential errors during execution
-    // 5. Returning the result in the expected format
+    // This is a placeholder implementation
     
-    // Placeholder implementation
+    // Simulate R code execution with a delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     
+    // Generate a mock result
     const mockResult = {
-      [outputVariableName]: `Mock result for ${outputVariableName}`,
+      result: `Mock result for ${outputVariableName}`,
       console: `[1] "Executed R function with inputs: ${inputVariableNames.join(', ')}"`,
       files: files.length > 0 ? `Processed files: ${files.join(', ')}` : 'No files processed'
     };
