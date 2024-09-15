@@ -1576,3 +1576,299 @@ Calling opencpuR with rCode:
   
 Raw result from OpenCPU: {"loc":"https://cloud.opencpu.org/ocpu/tmp/x03c7cd073f74cd/","key":"x03c7cd073f74cd","txt":"/ocpu/tmp/x03c7cd073f74cd/R/.val\n/ocpu/tmp/x03c7cd073f74cd/R/args\n/ocpu/tmp/x03c7cd073f74cd/R/do.call\n/ocpu/tmp/x03c7cd073f74cd/graphics/1\n/ocpu/tmp/x03c7cd073f74cd/stdout\n/ocpu/tmp/x03c7cd073f74cd/source\n/ocpu/tmp/x03c7cd073f74cd/console\n/ocpu/tmp/x03c7cd073f74cd/info\n/ocpu/tmp/x03c7cd073f74cd/files/DESCRIPTION\n","output":["/ocpu/tmp/x03c7cd073f74cd/R/.val","/ocpu/tmp/x03c7cd073f74cd/R/args","/ocpu/tmp/x03c7cd073f74cd/R/do.call","/ocpu/tmp/x03c7cd073f74cd/graphics/1","/ocpu/tmp/x03c7cd073f74cd/stdout","/ocpu/tmp/x03c7cd073f74cd/source","/ocpu/tmp/x03c7cd073f74cd/console","/ocpu/tmp/x03c7cd073f74cd/info","/ocpu/tmp/x03c7cd073f74cd/files/DESCRIPTION",""]}
 Processed output: {"randomWalk":{"steps":[-0.5605,-0.2302,1.5587,0.0705,0.1293,1.7151,0.4609,-1.2651,-0.6869,-0.4457,1.2241,0.3598,0.4008,0.1107,-0.5558,1.7869,0.4979,-1.9666,0.7014,-0.4728,-1.0678,-0.218,-1.026,-0.7289,-0.625,-1.6867,0.8378,0.1534,-1.1381,1.2538,0.4265,-0.2951,0.8951,0.8781,0.8216,0.6886,0.5539,-0.0619,-0.306,-0.3805,-0.6947,-0.2079,-1.2654,2.169,1.208,-1.1231,-0.4029,-0.4667,0.78,-0.0834,0.2533,-0.0285,-0.0429,1.3686,-0.2258,1.5165,-1.5488,0.5846,0.1239,0.2159,0.3796,-0.5023,-0.3332,-1.0186,-1.0718,0.3035,0.4482,0.053,0.9223,2.0501,-0.491,-2.3092,1.0057,-0.7092,-0.688,1.0256,-0.2848,-1.2207,0.1813,-0.1389,0.0058,0.3853,-0.3707,0.6444,-0.2205,0.3318,1.0968,0.4352,-0.3259,1.1488,0.9935,0.5484,0.2387,-0.6279,1.3607,-0.6003,2.1873,1.5326,-0.2357,-1.0264],"position":[-0.5605,-0.7907,0.7681,0.8386,0.9679,2.6829,3.1438,1.8788,1.1919,0.7463,1.9703,2.3302,2.7309,2.8416,2.2858,4.0727,4.5705,2.6039,3.3053,2.8325,1.7647,1.5467,0.5207,-0.2082,-0.8333,-2.52,-1.6822,-1.5288,-2.6669,-1.4131,-0.9866,-1.2817,-0.3866,0.4915,1.3131,2.0018,2.5557,2.4938,2.1878,1.8073,1.1126,0.9047,-0.3607,1.8083,3.0162,1.8931,1.4902,1.0236,1.8035,1.7202,1.9735,1.9449,1.9021,3.2707,3.0449,4.5614,3.0126,3.5972,3.7211,3.937,4.3167,3.8144,3.4811,2.4626,1.3908,1.6943,2.1425,2.1955,3.1178,5.1679,4.6768,2.3677,3.3734,2.6642,1.9762,3.0018,2.717,1.4963,1.6776,1.5387,1.5445,1.9297,1.5591,2.2035,1.983,2.3148,3.4116,3.8468,3.5208,4.6696,5.6632,6.2115,6.4503,5.8224,7.183,6.5828,8.7701,10.3027,10.067,9.0406]},"console":"> do.call(what = function() {\n+     set.seed(123)\n+     n <- 100\n+     steps <- rnorm(n)\n+     position <- cumsum(steps)\n+     plot(1:n, position, type = \"l\", main = \"Random Walk\", xlab = \"Step\", \n+         ylab = \"Position\")\n+     return(list(steps = steps, position = position))\n+ }, args = args)\n[[ plot ]]\nList of length  2 \n[steps]\n[position]","files":[]}
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"numeroAleatorio","rFunction":"function() { numero <- runif(1, 0, 100); return(numero) }"}
+Prepared arguments: {}
+Calling opencpuR with rCode: function() { numero <- runif(1, 0, 100); return(numero) }
+Raw result from OpenCPU: {"loc":"https://cloud.opencpu.org/ocpu/tmp/x092a61b9b447d2/","key":"x092a61b9b447d2","txt":"/ocpu/tmp/x092a61b9b447d2/R/.val\n/ocpu/tmp/x092a61b9b447d2/R/args\n/ocpu/tmp/x092a61b9b447d2/R/do.call\n/ocpu/tmp/x092a61b9b447d2/stdout\n/ocpu/tmp/x092a61b9b447d2/source\n/ocpu/tmp/x092a61b9b447d2/console\n/ocpu/tmp/x092a61b9b447d2/info\n/ocpu/tmp/x092a61b9b447d2/files/DESCRIPTION\n","output":["/ocpu/tmp/x092a61b9b447d2/R/.val","/ocpu/tmp/x092a61b9b447d2/R/args","/ocpu/tmp/x092a61b9b447d2/R/do.call","/ocpu/tmp/x092a61b9b447d2/stdout","/ocpu/tmp/x092a61b9b447d2/source","/ocpu/tmp/x092a61b9b447d2/console","/ocpu/tmp/x092a61b9b447d2/info","/ocpu/tmp/x092a61b9b447d2/files/DESCRIPTION",""]}
+Processed output: {"numeroAleatorio":[37.6893],"console":"> do.call(what = function() {\n+     numero <- runif(1, 0, 100)\n+     return(numero)\n+ }, args = args)\n[1] 37.68928","files":[]}
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"trendingMemeCoins","rFunction":"function() { library(httr) url <- 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false' response <- GET(url) data <- content(response, 'parsed') memeCoins <- c('dogecoin', 'shiba-inu', 'safemoon', 'elongate', 'cumrocket') trendingMemeCoins <- data[data$symbol %in% memeCoins, ] return(trendingMemeCoins) }"}
+Prepared arguments: {}
+Calling opencpuR with rCode: function() { library(httr) url <- 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false' response <- GET(url) data <- content(response, 'parsed') memeCoins <- c('dogecoin', 'shiba-inu', 'safemoon', 'elongate', 'cumrocket') trendingMemeCoins <- data[data$symbol %in% memeCoins, ] return(trendingMemeCoins) }
+Error executing R code: Error: HTTP error! status: 400, message: Unparsable argument: function() { library(httr) url <- 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false' response <- GET(url) data <- content(response, 'parsed') memeCoins <- c('dogecoin', 'shiba-inu', 'safemoon', 'elongate', 'cumrocket') trendingMemeCoins <- data[data$symbol %in% memeCoins, ] return(trendingMemeCoins) }
+    at OpenCPU.call (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_b6755f._.js:1894:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_b6755f._.js:2099:24)
+    at async generate (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_b6755f._.js:2320:36)
+    at async render2 (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_0a5745._.js:1326:41)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"passeioAleatorio","rFunction":"function() {\n  library(ggplot2)\n  set.seed(123)\n  n <- 100\n  x <- cumsum(rnorm(n))\n  y <- cumsum(rnorm(n))\n  passeioAleatorio <- data.frame(x = x, y = y)\n  return(passeioAleatorio)\n}"}
+Prepared arguments: {}
+Calling opencpuR with rCode: function() {
+  library(ggplot2)
+  set.seed(123)
+  n <- 100
+  x <- cumsum(rnorm(n))
+  y <- cumsum(rnorm(n))
+  passeioAleatorio <- data.frame(x = x, y = y)
+  return(passeioAleatorio)
+}
+Error executing R code: Error: HTTP error! status: 400, message: there is no package called 'ggplot2'
+
+In call:
+library(ggplot2)
+
+Backtrace:
+    ▆
+ 1. └─output_handler$error(e)
+
+    at OpenCPU.call (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_b6755f._.js:1894:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_b6755f._.js:2099:24)
+    at async generate (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_b6755f._.js:2320:36)
+    at async render2 (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_0a5745._.js:1326:41)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"passeioAleatorio","rFunction":"function() {\n  set.seed(123) # para garantir a reprodutibilidade\n  desvios <- rnorm(100) # gerar 100 desvios aleatórios\n  passeio <- cumsum(desvios) # calcular o passeio aleatório\n  return(passeio)\n}"}
+Prepared arguments: {}
+Calling opencpuR with rCode: function() {
+  set.seed(123) # para garantir a reprodutibilidade
+  desvios <- rnorm(100) # gerar 100 desvios aleatórios
+  passeio <- cumsum(desvios) # calcular o passeio aleatório
+  return(passeio)
+}
+Raw result from OpenCPU: {"loc":"https://cloud.opencpu.org/ocpu/tmp/x048c3af5056531/","key":"x048c3af5056531","txt":"/ocpu/tmp/x048c3af5056531/R/.val\n/ocpu/tmp/x048c3af5056531/R/args\n/ocpu/tmp/x048c3af5056531/R/do.call\n/ocpu/tmp/x048c3af5056531/stdout\n/ocpu/tmp/x048c3af5056531/source\n/ocpu/tmp/x048c3af5056531/console\n/ocpu/tmp/x048c3af5056531/info\n/ocpu/tmp/x048c3af5056531/files/DESCRIPTION\n","output":["/ocpu/tmp/x048c3af5056531/R/.val","/ocpu/tmp/x048c3af5056531/R/args","/ocpu/tmp/x048c3af5056531/R/do.call","/ocpu/tmp/x048c3af5056531/stdout","/ocpu/tmp/x048c3af5056531/source","/ocpu/tmp/x048c3af5056531/console","/ocpu/tmp/x048c3af5056531/info","/ocpu/tmp/x048c3af5056531/files/DESCRIPTION",""]}
+Processed output: {"passeioAleatorio":[-0.5605,-0.7907,0.7681,0.8386,0.9679,2.6829,3.1438,1.8788,1.1919,0.7463,1.9703,2.3302,2.7309,2.8416,2.2858,4.0727,4.5705,2.6039,3.3053,2.8325,1.7647,1.5467,0.5207,-0.2082,-0.8333,-2.52,-1.6822,-1.5288,-2.6669,-1.4131,-0.9866,-1.2817,-0.3866,0.4915,1.3131,2.0018,2.5557,2.4938,2.1878,1.8073,1.1126,0.9047,-0.3607,1.8083,3.0162,1.8931,1.4902,1.0236,1.8035,1.7202,1.9735,1.9449,1.9021,3.2707,3.0449,4.5614,3.0126,3.5972,3.7211,3.937,4.3167,3.8144,3.4811,2.4626,1.3908,1.6943,2.1425,2.1955,3.1178,5.1679,4.6768,2.3677,3.3734,2.6642,1.9762,3.0018,2.717,1.4963,1.6776,1.5387,1.5445,1.9297,1.5591,2.2035,1.983,2.3148,3.4116,3.8468,3.5208,4.6696,5.6632,6.2115,6.4503,5.8224,7.183,6.5828,8.7701,10.3027,10.067,9.0406],"console":"> do.call(what = function() {\n+     set.seed(123)\n+     desvios <- rnorm(100)\n+     passeio <- cumsum(desvios)\n+     return(passeio)\n+ }, args = args)\n  [1] -0.5604756 -0.7906531  0.7680552  0.8385636  0.9678513  2.6829163\n  [7]  3.1438325  1.8787713  1.1919184  0.7462564  1.9703382  2.3301521\n [13]  2.7309235  2.8416062  2.2857651  4.0726782  4.5705287  2.6039116\n [19]  3.3052675  2.8324760  1.7646523  1.5466774  0.5206730 -0.2082182\n [25] -0.8332575 -2.5199508 -1.6821638 -1.5287907 -2.6669276 -1.4131127\n [31] -0.9866485 -1.2817199 -0.3865943  0.4915392  1.3131203  2.0017605\n [37]  2.5556782  2.4937665  2.1878038  1.8073328  1.1126258  0.9047086\n [43] -0.3606878  1.8082682  3.0162302  1.8931216  1.4902368  1.0235814\n [49]  1.8035465  1.7201775  1.9734960  1.9449492  1.9020788  3.2706810\n [55]  3.0449101  4.5613807  3.0126279  3.5972416  3.7210958  3.9370374\n [61]  4.3166769  3.8143534  3.4811461  2.4625707  1.3907795  1.6943081\n [67]  2.1425179  2.1955221  3.1177896  5.1678743  4.6768431  2.3676742\n [73]  3.3734127  2.6642120  1.9762034  3.0017747  2.7170017  1.4962840\n [79]  1.6775875  1.5386961  1.5444603  1.9297407  1.5590807  2.2034572\n [85]  1.9829707  2.3147526  3.4115916  3.8467731  3.5208415  4.6696492\n [91]  5.6631530  6.2115500  6.4502817  5.8223756  7.1830281  6.5827685\n [97]  8.7701015 10.3027121 10.0670118  9.0405909","files":[]}
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"noticiasDogecoin","rFunction":"function() {\n  library(httr)\n  library(jsonlite)\n  url <- 'https://newsapi.org/v2/everything?q=dogecoin&sortBy=publishedAt&apiKey=YOUR_NEWSAPI_KEY'\n  response <- GET(url)\n  newsData <- content(response, 'text')\n  newsData <- fromJSON(newsData)\n  newsData <- newsData$articles\n  return(newsData)\n}"}
+Prepared arguments: {}
+Calling opencpuR with rCode: function() {
+  library(httr)
+  library(jsonlite)
+  url <- 'https://newsapi.org/v2/everything?q=dogecoin&sortBy=publishedAt&apiKey=YOUR_NEWSAPI_KEY'
+  response <- GET(url)
+  newsData <- content(response, 'text')
+  newsData <- fromJSON(newsData)
+  newsData <- newsData$articles
+  return(newsData)
+}
+Error executing R code: Error: HTTP error! status: 400, message: there is no package called 'httr'
+
+In call:
+library(httr)
+
+Backtrace:
+    ▆
+ 1. └─output_handler$error(e)
+
+    at OpenCPU.call (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_b6755f._.js:1894:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_b6755f._.js:2099:24)
+    at async generate (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_b6755f._.js:2320:36)
+    at async render2 (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_0a5745._.js:1326:41)
+OpenCPU wrapper initialized with default settings
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"numeroAleatorio","rFunction":"function() { numero <- runif(1, 0, 100); return(numero) }"}
+Prepared arguments: {}
+Calling opencpuR with rCode: function() { numero <- runif(1, 0, 100); return(numero) }
+Raw result from OpenCPU: {"loc":"http://opencpu.belo.re/ocpu/tmp/x0efe740cbecff0/","key":"x0efe740cbecff0","txt":"/ocpu/tmp/x0efe740cbecff0/R/.val\n/ocpu/tmp/x0efe740cbecff0/R/args\n/ocpu/tmp/x0efe740cbecff0/R/do.call\n/ocpu/tmp/x0efe740cbecff0/stdout\n/ocpu/tmp/x0efe740cbecff0/source\n/ocpu/tmp/x0efe740cbecff0/console\n/ocpu/tmp/x0efe740cbecff0/info\n/ocpu/tmp/x0efe740cbecff0/files/DESCRIPTION\n","output":["/ocpu/tmp/x0efe740cbecff0/R/.val","/ocpu/tmp/x0efe740cbecff0/R/args","/ocpu/tmp/x0efe740cbecff0/R/do.call","/ocpu/tmp/x0efe740cbecff0/stdout","/ocpu/tmp/x0efe740cbecff0/source","/ocpu/tmp/x0efe740cbecff0/console","/ocpu/tmp/x0efe740cbecff0/info","/ocpu/tmp/x0efe740cbecff0/files/DESCRIPTION",""]}
+Processed output: {"numeroAleatorio":[64.0085],"console":"> do.call(what = function() {\n+     numero <- runif(1, 0, 100)\n+     return(numero)\n+ }, args = args)\n[1] 64.00847","files":[]}
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"passeioAleatorio","rFunction":"function() { set.seed(123); random_walk <- cumsum(rnorm(100)); return(random_walk) }"}
+Prepared arguments: {}
+Calling opencpuR with rCode: function() { set.seed(123); random_walk <- cumsum(rnorm(100)); return(random_walk) }
+Raw result from OpenCPU: {"loc":"http://opencpu.belo.re/ocpu/tmp/x0b832f06205c0c/","key":"x0b832f06205c0c","txt":"/ocpu/tmp/x0b832f06205c0c/R/.val\n/ocpu/tmp/x0b832f06205c0c/R/args\n/ocpu/tmp/x0b832f06205c0c/R/do.call\n/ocpu/tmp/x0b832f06205c0c/stdout\n/ocpu/tmp/x0b832f06205c0c/source\n/ocpu/tmp/x0b832f06205c0c/console\n/ocpu/tmp/x0b832f06205c0c/info\n/ocpu/tmp/x0b832f06205c0c/files/DESCRIPTION\n","output":["/ocpu/tmp/x0b832f06205c0c/R/.val","/ocpu/tmp/x0b832f06205c0c/R/args","/ocpu/tmp/x0b832f06205c0c/R/do.call","/ocpu/tmp/x0b832f06205c0c/stdout","/ocpu/tmp/x0b832f06205c0c/source","/ocpu/tmp/x0b832f06205c0c/console","/ocpu/tmp/x0b832f06205c0c/info","/ocpu/tmp/x0b832f06205c0c/files/DESCRIPTION",""]}
+Processed output: {"passeioAleatorio":[-0.5605,-0.7907,0.7681,0.8386,0.9679,2.6829,3.1438,1.8788,1.1919,0.7463,1.9703,2.3302,2.7309,2.8416,2.2858,4.0727,4.5705,2.6039,3.3053,2.8325,1.7647,1.5467,0.5207,-0.2082,-0.8333,-2.52,-1.6822,-1.5288,-2.6669,-1.4131,-0.9866,-1.2817,-0.3866,0.4915,1.3131,2.0018,2.5557,2.4938,2.1878,1.8073,1.1126,0.9047,-0.3607,1.8083,3.0162,1.8931,1.4902,1.0236,1.8035,1.7202,1.9735,1.9449,1.9021,3.2707,3.0449,4.5614,3.0126,3.5972,3.7211,3.937,4.3167,3.8144,3.4811,2.4626,1.3908,1.6943,2.1425,2.1955,3.1178,5.1679,4.6768,2.3677,3.3734,2.6642,1.9762,3.0018,2.717,1.4963,1.6776,1.5387,1.5445,1.9297,1.5591,2.2035,1.983,2.3148,3.4116,3.8468,3.5208,4.6696,5.6632,6.2115,6.4503,5.8224,7.183,6.5828,8.7701,10.3027,10.067,9.0406],"console":"> do.call(what = function() {\n+     set.seed(123)\n+     random_walk <- cumsum(rnorm(100))\n+     return(random_walk)\n+ }, args = args)\n  [1] -0.5604756 -0.7906531  0.7680552  0.8385636  0.9678513  2.6829163\n  [7]  3.1438325  1.8787713  1.1919184  0.7462564  1.9703382  2.3301521\n [13]  2.7309235  2.8416062  2.2857651  4.0726782  4.5705287  2.6039116\n [19]  3.3052675  2.8324760  1.7646523  1.5466774  0.5206730 -0.2082182\n [25] -0.8332575 -2.5199508 -1.6821638 -1.5287907 -2.6669276 -1.4131127\n [31] -0.9866485 -1.2817199 -0.3865943  0.4915392  1.3131203  2.0017605\n [37]  2.5556782  2.4937665  2.1878038  1.8073328  1.1126258  0.9047086\n [43] -0.3606878  1.8082682  3.0162302  1.8931216  1.4902368  1.0235814\n [49]  1.8035465  1.7201775  1.9734960  1.9449492  1.9020788  3.2706810\n [55]  3.0449101  4.5613807  3.0126279  3.5972416  3.7210958  3.9370374\n [61]  4.3166769  3.8143534  3.4811461  2.4625707  1.3907795  1.6943081\n [67]  2.1425179  2.1955221  3.1177896  5.1678743  4.6768431  2.3676742\n [73]  3.3734127  2.6642120  1.9762034  3.0017747  2.7170017  1.4962840\n [79]  1.6775875  1.5386961  1.5444603  1.9297407  1.5590807  2.2034572\n [85]  1.9829707  2.3147526  3.4115916  3.8467731  3.5208415  4.6696492\n [91]  5.6631530  6.2115500  6.4502817  5.8223756  7.1830281  6.5827685\n [97]  8.7701015 10.3027121 10.0670118  9.0405909","files":[]}
+OpenCPU wrapper initialized with default settings
+executeRCode started
+executeRCode started
+executeRCode started
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"simpleResult","rFunction":"function() { return(1 + 1) }"}
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"plotResult","rFunction":"\n    function() {\n      x <- 1:10\n      y <- x^2\n      plot(x, y, main=\"Square Function\")\n      return(list(x=x, y=y))\n    }\n  "}
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"errorResult","rFunction":"\n    function() {\n      stop(\"This is a deliberate error\")\n    }\n  "}
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared arguments: {}
+Prepared arguments: {}
+Prepared arguments: {}
+Prepared arguments: {}
+Calling opencpuR with rCode: function() { return(1 + 1) }
+Calling opencpuR with rCode: 
+    function() {
+      x <- 1:10
+      y <- x^2
+      plot(x, y, main="Square Function")
+      return(list(x=x, y=y))
+    }
+  
+Calling opencpuR with rCode: 
+    function() {
+      stop("This is a deliberate error")
+    }
+  
+Calling opencpuR with rCode: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+Error executing R code: Error: HTTP error! status: 400, message: This is a deliberate error
+
+In call:
+(function () 
+{
+    stop("This is a deliberate error")
+})()
+
+Backtrace:
+    ▆
+ 1. └─base::eval(expr, envir, enclos)
+ 2.   └─base::eval(expr, envir, enclos)
+ 3.     ├─base::do.call(...)
+ 4.     └─`<fn>`()
+ 5.       └─base::stop("This is a deliberate error")
+
+    at OpenCPU.call (/Users/paulinooliveira/Documents/nextjs-chat/opencpu-wrapper/opencpu.ts:71:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/lib/r-execution.ts:47:20)
+    at async testErrorHandling (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:81:20)
+    at async Promise.all (index 3)
+    at async runTests (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:92:23)
+Raw result from OpenCPU: {"loc":"http://opencpu.belo.re/ocpu/tmp/x07161fa95d4200/","key":"x07161fa95d4200","txt":"/ocpu/tmp/x07161fa95d4200/R/.val\n/ocpu/tmp/x07161fa95d4200/R/args\n/ocpu/tmp/x07161fa95d4200/R/do.call\n/ocpu/tmp/x07161fa95d4200/stdout\n/ocpu/tmp/x07161fa95d4200/source\n/ocpu/tmp/x07161fa95d4200/console\n/ocpu/tmp/x07161fa95d4200/info\n/ocpu/tmp/x07161fa95d4200/files/DESCRIPTION\n","output":["/ocpu/tmp/x07161fa95d4200/R/.val","/ocpu/tmp/x07161fa95d4200/R/args","/ocpu/tmp/x07161fa95d4200/R/do.call","/ocpu/tmp/x07161fa95d4200/stdout","/ocpu/tmp/x07161fa95d4200/source","/ocpu/tmp/x07161fa95d4200/console","/ocpu/tmp/x07161fa95d4200/info","/ocpu/tmp/x07161fa95d4200/files/DESCRIPTION",""]}
+Raw result from OpenCPU: {"loc":"http://opencpu.belo.re/ocpu/tmp/x0f3d08da086ead/","key":"x0f3d08da086ead","txt":"/ocpu/tmp/x0f3d08da086ead/R/.val\n/ocpu/tmp/x0f3d08da086ead/R/args\n/ocpu/tmp/x0f3d08da086ead/R/do.call\n/ocpu/tmp/x0f3d08da086ead/graphics/1\n/ocpu/tmp/x0f3d08da086ead/stdout\n/ocpu/tmp/x0f3d08da086ead/source\n/ocpu/tmp/x0f3d08da086ead/console\n/ocpu/tmp/x0f3d08da086ead/info\n/ocpu/tmp/x0f3d08da086ead/files/DESCRIPTION\n","output":["/ocpu/tmp/x0f3d08da086ead/R/.val","/ocpu/tmp/x0f3d08da086ead/R/args","/ocpu/tmp/x0f3d08da086ead/R/do.call","/ocpu/tmp/x0f3d08da086ead/graphics/1","/ocpu/tmp/x0f3d08da086ead/stdout","/ocpu/tmp/x0f3d08da086ead/source","/ocpu/tmp/x0f3d08da086ead/console","/ocpu/tmp/x0f3d08da086ead/info","/ocpu/tmp/x0f3d08da086ead/files/DESCRIPTION",""]}
+Raw result from OpenCPU: {"loc":"http://opencpu.belo.re/ocpu/tmp/x04fcbc4f14232a/","key":"x04fcbc4f14232a","txt":"/ocpu/tmp/x04fcbc4f14232a/R/.val\n/ocpu/tmp/x04fcbc4f14232a/R/args\n/ocpu/tmp/x04fcbc4f14232a/R/do.call\n/ocpu/tmp/x04fcbc4f14232a/stdout\n/ocpu/tmp/x04fcbc4f14232a/source\n/ocpu/tmp/x04fcbc4f14232a/console\n/ocpu/tmp/x04fcbc4f14232a/info\n/ocpu/tmp/x04fcbc4f14232a/files/DESCRIPTION\n","output":["/ocpu/tmp/x04fcbc4f14232a/R/.val","/ocpu/tmp/x04fcbc4f14232a/R/args","/ocpu/tmp/x04fcbc4f14232a/R/do.call","/ocpu/tmp/x04fcbc4f14232a/stdout","/ocpu/tmp/x04fcbc4f14232a/source","/ocpu/tmp/x04fcbc4f14232a/console","/ocpu/tmp/x04fcbc4f14232a/info","/ocpu/tmp/x04fcbc4f14232a/files/DESCRIPTION",""]}
+Processed output: {"randomWalk":{"steps":[-0.5605,-0.2302,1.5587,0.0705,0.1293,1.7151,0.4609,-1.2651,-0.6869,-0.4457,1.2241,0.3598,0.4008,0.1107,-0.5558,1.7869,0.4979,-1.9666,0.7014,-0.4728,-1.0678,-0.218,-1.026,-0.7289,-0.625,-1.6867,0.8378,0.1534,-1.1381,1.2538,0.4265,-0.2951,0.8951,0.8781,0.8216,0.6886,0.5539,-0.0619,-0.306,-0.3805,-0.6947,-0.2079,-1.2654,2.169,1.208,-1.1231,-0.4029,-0.4667,0.78,-0.0834,0.2533,-0.0285,-0.0429,1.3686,-0.2258,1.5165,-1.5488,0.5846,0.1239,0.2159,0.3796,-0.5023,-0.3332,-1.0186,-1.0718,0.3035,0.4482,0.053,0.9223,2.0501,-0.491,-2.3092,1.0057,-0.7092,-0.688,1.0256,-0.2848,-1.2207,0.1813,-0.1389,0.0058,0.3853,-0.3707,0.6444,-0.2205,0.3318,1.0968,0.4352,-0.3259,1.1488,0.9935,0.5484,0.2387,-0.6279,1.3607,-0.6003,2.1873,1.5326,-0.2357,-1.0264],"position":[-0.5605,-0.7907,0.7681,0.8386,0.9679,2.6829,3.1438,1.8788,1.1919,0.7463,1.9703,2.3302,2.7309,2.8416,2.2858,4.0727,4.5705,2.6039,3.3053,2.8325,1.7647,1.5467,0.5207,-0.2082,-0.8333,-2.52,-1.6822,-1.5288,-2.6669,-1.4131,-0.9866,-1.2817,-0.3866,0.4915,1.3131,2.0018,2.5557,2.4938,2.1878,1.8073,1.1126,0.9047,-0.3607,1.8083,3.0162,1.8931,1.4902,1.0236,1.8035,1.7202,1.9735,1.9449,1.9021,3.2707,3.0449,4.5614,3.0126,3.5972,3.7211,3.937,4.3167,3.8144,3.4811,2.4626,1.3908,1.6943,2.1425,2.1955,3.1178,5.1679,4.6768,2.3677,3.3734,2.6642,1.9762,3.0018,2.717,1.4963,1.6776,1.5387,1.5445,1.9297,1.5591,2.2035,1.983,2.3148,3.4116,3.8468,3.5208,4.6696,5.6632,6.2115,6.4503,5.8224,7.183,6.5828,8.7701,10.3027,10.067,9.0406]},"console":"> do.call(what = function() {\n+     set.seed(123)\n+     n <- 100\n+     steps <- rnorm(n)\n+     position <- cumsum(steps)\n+     return(list(steps = steps, position = position))\n+ }, args = args)\nList of length  2 \n[steps]\n[position]","files":[]}
+Processed output: {"plotResult":{"x":[1,2,3,4,5,6,7,8,9,10],"y":[1,4,9,16,25,36,49,64,81,100]},"console":"> do.call(what = function() {\n+     x <- 1:10\n+     y <- x^2\n+     plot(x, y, main = \"Square Function\")\n+     return(list(x = x, y = y))\n+ }, args = args)\n[[ plot ]]\nList of length  2 \n[x]\n[y]","files":[]}
+Processed output: {"simpleResult":[2],"console":"> do.call(what = function() {\n+     return(1 + 1)\n+ }, args = args)\n[1] 2","files":[]}
+OpenCPU wrapper initialized with default settings
+executeRCode started
+executeRCode started
+executeRCode started
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"errorResult","rFunction":"\n    function() {\n      stop(\"This is a deliberate error\")\n    }\n  "}
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"simpleResult","rFunction":"function() { return(1 + 1) }"}
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"plotResult","rFunction":"\n    function() {\n      x <- 1:10\n      y <- x^2\n      plot(x, y, main=\"Square Function\")\n      return(list(x=x, y=y))\n    }\n  "}
+Prepared arguments: {}
+Prepared arguments: {}
+Prepared arguments: {}
+Prepared arguments: {}
+Calling opencpuR with rCode: 
+    function() {
+      stop("This is a deliberate error")
+    }
+  
+Calling opencpuR with rCode: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+Calling opencpuR with rCode: 
+    function() {
+      x <- 1:10
+      y <- x^2
+      plot(x, y, main="Square Function")
+      return(list(x=x, y=y))
+    }
+  
+Calling opencpuR with rCode: function() { return(1 + 1) }
+Raw result from OpenCPU: {"loc":"http://opencpu.belo.re/ocpu/tmp/x028b44a779e3c6/","key":"x028b44a779e3c6","txt":"/ocpu/tmp/x028b44a779e3c6/R/.val\n/ocpu/tmp/x028b44a779e3c6/R/args\n/ocpu/tmp/x028b44a779e3c6/R/do.call\n/ocpu/tmp/x028b44a779e3c6/graphics/1\n/ocpu/tmp/x028b44a779e3c6/stdout\n/ocpu/tmp/x028b44a779e3c6/source\n/ocpu/tmp/x028b44a779e3c6/console\n/ocpu/tmp/x028b44a779e3c6/info\n/ocpu/tmp/x028b44a779e3c6/files/DESCRIPTION\n","output":["/ocpu/tmp/x028b44a779e3c6/R/.val","/ocpu/tmp/x028b44a779e3c6/R/args","/ocpu/tmp/x028b44a779e3c6/R/do.call","/ocpu/tmp/x028b44a779e3c6/graphics/1","/ocpu/tmp/x028b44a779e3c6/stdout","/ocpu/tmp/x028b44a779e3c6/source","/ocpu/tmp/x028b44a779e3c6/console","/ocpu/tmp/x028b44a779e3c6/info","/ocpu/tmp/x028b44a779e3c6/files/DESCRIPTION",""]}
+Raw result from OpenCPU: {"loc":"http://opencpu.belo.re/ocpu/tmp/x0957f2968e77ed/","key":"x0957f2968e77ed","txt":"/ocpu/tmp/x0957f2968e77ed/R/.val\n/ocpu/tmp/x0957f2968e77ed/R/args\n/ocpu/tmp/x0957f2968e77ed/R/do.call\n/ocpu/tmp/x0957f2968e77ed/stdout\n/ocpu/tmp/x0957f2968e77ed/source\n/ocpu/tmp/x0957f2968e77ed/console\n/ocpu/tmp/x0957f2968e77ed/info\n/ocpu/tmp/x0957f2968e77ed/files/DESCRIPTION\n","output":["/ocpu/tmp/x0957f2968e77ed/R/.val","/ocpu/tmp/x0957f2968e77ed/R/args","/ocpu/tmp/x0957f2968e77ed/R/do.call","/ocpu/tmp/x0957f2968e77ed/stdout","/ocpu/tmp/x0957f2968e77ed/source","/ocpu/tmp/x0957f2968e77ed/console","/ocpu/tmp/x0957f2968e77ed/info","/ocpu/tmp/x0957f2968e77ed/files/DESCRIPTION",""]}
+Processed output: {"plotResult":{"x":[1,2,3,4,5,6,7,8,9,10],"y":[1,4,9,16,25,36,49,64,81,100]},"console":"> do.call(what = function() {\n+     x <- 1:10\n+     y <- x^2\n+     plot(x, y, main = \"Square Function\")\n+     return(list(x = x, y = y))\n+ }, args = args)\n[[ plot ]]\nList of length  2 \n[x]\n[y]","files":[]}
+Raw result from OpenCPU: {"loc":"http://opencpu.belo.re/ocpu/tmp/x0ee8e601f953bb/","key":"x0ee8e601f953bb","txt":"/ocpu/tmp/x0ee8e601f953bb/R/.val\n/ocpu/tmp/x0ee8e601f953bb/R/args\n/ocpu/tmp/x0ee8e601f953bb/R/do.call\n/ocpu/tmp/x0ee8e601f953bb/stdout\n/ocpu/tmp/x0ee8e601f953bb/source\n/ocpu/tmp/x0ee8e601f953bb/console\n/ocpu/tmp/x0ee8e601f953bb/info\n/ocpu/tmp/x0ee8e601f953bb/files/DESCRIPTION\n","output":["/ocpu/tmp/x0ee8e601f953bb/R/.val","/ocpu/tmp/x0ee8e601f953bb/R/args","/ocpu/tmp/x0ee8e601f953bb/R/do.call","/ocpu/tmp/x0ee8e601f953bb/stdout","/ocpu/tmp/x0ee8e601f953bb/source","/ocpu/tmp/x0ee8e601f953bb/console","/ocpu/tmp/x0ee8e601f953bb/info","/ocpu/tmp/x0ee8e601f953bb/files/DESCRIPTION",""]}
+Processed output: {"simpleResult":[2],"console":"> do.call(what = function() {\n+     return(1 + 1)\n+ }, args = args)\n[1] 2","files":[]}
+Processed output: {"randomWalk":{"steps":[-0.5605,-0.2302,1.5587,0.0705,0.1293,1.7151,0.4609,-1.2651,-0.6869,-0.4457,1.2241,0.3598,0.4008,0.1107,-0.5558,1.7869,0.4979,-1.9666,0.7014,-0.4728,-1.0678,-0.218,-1.026,-0.7289,-0.625,-1.6867,0.8378,0.1534,-1.1381,1.2538,0.4265,-0.2951,0.8951,0.8781,0.8216,0.6886,0.5539,-0.0619,-0.306,-0.3805,-0.6947,-0.2079,-1.2654,2.169,1.208,-1.1231,-0.4029,-0.4667,0.78,-0.0834,0.2533,-0.0285,-0.0429,1.3686,-0.2258,1.5165,-1.5488,0.5846,0.1239,0.2159,0.3796,-0.5023,-0.3332,-1.0186,-1.0718,0.3035,0.4482,0.053,0.9223,2.0501,-0.491,-2.3092,1.0057,-0.7092,-0.688,1.0256,-0.2848,-1.2207,0.1813,-0.1389,0.0058,0.3853,-0.3707,0.6444,-0.2205,0.3318,1.0968,0.4352,-0.3259,1.1488,0.9935,0.5484,0.2387,-0.6279,1.3607,-0.6003,2.1873,1.5326,-0.2357,-1.0264],"position":[-0.5605,-0.7907,0.7681,0.8386,0.9679,2.6829,3.1438,1.8788,1.1919,0.7463,1.9703,2.3302,2.7309,2.8416,2.2858,4.0727,4.5705,2.6039,3.3053,2.8325,1.7647,1.5467,0.5207,-0.2082,-0.8333,-2.52,-1.6822,-1.5288,-2.6669,-1.4131,-0.9866,-1.2817,-0.3866,0.4915,1.3131,2.0018,2.5557,2.4938,2.1878,1.8073,1.1126,0.9047,-0.3607,1.8083,3.0162,1.8931,1.4902,1.0236,1.8035,1.7202,1.9735,1.9449,1.9021,3.2707,3.0449,4.5614,3.0126,3.5972,3.7211,3.937,4.3167,3.8144,3.4811,2.4626,1.3908,1.6943,2.1425,2.1955,3.1178,5.1679,4.6768,2.3677,3.3734,2.6642,1.9762,3.0018,2.717,1.4963,1.6776,1.5387,1.5445,1.9297,1.5591,2.2035,1.983,2.3148,3.4116,3.8468,3.5208,4.6696,5.6632,6.2115,6.4503,5.8224,7.183,6.5828,8.7701,10.3027,10.067,9.0406]},"console":"> do.call(what = function() {\n+     set.seed(123)\n+     n <- 100\n+     steps <- rnorm(n)\n+     position <- cumsum(steps)\n+     return(list(steps = steps, position = position))\n+ }, args = args)\nList of length  2 \n[steps]\n[position]","files":[]}
+Error executing R code: Error: HTTP error! status: 400, message: This is a deliberate error
+
+In call:
+(function () 
+{
+    stop("This is a deliberate error")
+})()
+
+Backtrace:
+    ▆
+ 1. └─base::eval(expr, envir, enclos)
+ 2.   └─base::eval(expr, envir, enclos)
+ 3.     ├─base::do.call(...)
+ 4.     └─`<fn>`()
+ 5.       └─base::stop("This is a deliberate error")
+
+    at OpenCPU.call (/Users/paulinooliveira/Documents/nextjs-chat/opencpu-wrapper/opencpu.ts:71:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/lib/r-execution.ts:47:20)
+    at async testErrorHandling (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:80:18)
+    at async Promise.all (index 3)
+    at async runTests (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:88:23)
+OpenCPU wrapper initialized with default settings
+executeRCode started
+executeRCode started
+executeRCode started
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"simpleResult","rFunction":"function() { return(1 + 1) }"}
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"errorResult","rFunction":"\n    function() {\n      stop(\"This is a deliberate error\")\n    }\n  "}
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"plotResult","rFunction":"\n    function() {\n      x <- 1:10\n      y <- x^2\n      plot(x, y, main=\"Square Function\")\n      return(list(x=x, y=y))\n    }\n  "}
+Prepared arguments: {}
+Prepared arguments: {}
+Prepared arguments: {}
+Prepared arguments: {}
+Calling opencpuR with rCode: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+Calling opencpuR with rCode: function() { return(1 + 1) }
+Calling opencpuR with rCode: 
+    function() {
+      x <- 1:10
+      y <- x^2
+      plot(x, y, main="Square Function")
+      return(list(x=x, y=y))
+    }
+  
+Calling opencpuR with rCode: 
+    function() {
+      stop("This is a deliberate error")
+    }
+  
+Raw result from OpenCPU: {"loc":"http://opencpu.belo.re/ocpu/tmp/x0e00fb19f33e45/","key":"x0e00fb19f33e45","txt":"/ocpu/tmp/x0e00fb19f33e45/R/.val\n/ocpu/tmp/x0e00fb19f33e45/R/args\n/ocpu/tmp/x0e00fb19f33e45/R/do.call\n/ocpu/tmp/x0e00fb19f33e45/stdout\n/ocpu/tmp/x0e00fb19f33e45/source\n/ocpu/tmp/x0e00fb19f33e45/console\n/ocpu/tmp/x0e00fb19f33e45/info\n/ocpu/tmp/x0e00fb19f33e45/files/DESCRIPTION\n","output":["/ocpu/tmp/x0e00fb19f33e45/R/.val","/ocpu/tmp/x0e00fb19f33e45/R/args","/ocpu/tmp/x0e00fb19f33e45/R/do.call","/ocpu/tmp/x0e00fb19f33e45/stdout","/ocpu/tmp/x0e00fb19f33e45/source","/ocpu/tmp/x0e00fb19f33e45/console","/ocpu/tmp/x0e00fb19f33e45/info","/ocpu/tmp/x0e00fb19f33e45/files/DESCRIPTION",""]}
+Raw result from OpenCPU: {"loc":"http://opencpu.belo.re/ocpu/tmp/x00dd06f59e6783/","key":"x00dd06f59e6783","txt":"/ocpu/tmp/x00dd06f59e6783/R/.val\n/ocpu/tmp/x00dd06f59e6783/R/args\n/ocpu/tmp/x00dd06f59e6783/R/do.call\n/ocpu/tmp/x00dd06f59e6783/stdout\n/ocpu/tmp/x00dd06f59e6783/source\n/ocpu/tmp/x00dd06f59e6783/console\n/ocpu/tmp/x00dd06f59e6783/info\n/ocpu/tmp/x00dd06f59e6783/files/DESCRIPTION\n","output":["/ocpu/tmp/x00dd06f59e6783/R/.val","/ocpu/tmp/x00dd06f59e6783/R/args","/ocpu/tmp/x00dd06f59e6783/R/do.call","/ocpu/tmp/x00dd06f59e6783/stdout","/ocpu/tmp/x00dd06f59e6783/source","/ocpu/tmp/x00dd06f59e6783/console","/ocpu/tmp/x00dd06f59e6783/info","/ocpu/tmp/x00dd06f59e6783/files/DESCRIPTION",""]}
+Raw result from OpenCPU: {"loc":"http://opencpu.belo.re/ocpu/tmp/x0b9dae18c60275/","key":"x0b9dae18c60275","txt":"/ocpu/tmp/x0b9dae18c60275/R/.val\n/ocpu/tmp/x0b9dae18c60275/R/args\n/ocpu/tmp/x0b9dae18c60275/R/do.call\n/ocpu/tmp/x0b9dae18c60275/graphics/1\n/ocpu/tmp/x0b9dae18c60275/stdout\n/ocpu/tmp/x0b9dae18c60275/source\n/ocpu/tmp/x0b9dae18c60275/console\n/ocpu/tmp/x0b9dae18c60275/info\n/ocpu/tmp/x0b9dae18c60275/files/DESCRIPTION\n","output":["/ocpu/tmp/x0b9dae18c60275/R/.val","/ocpu/tmp/x0b9dae18c60275/R/args","/ocpu/tmp/x0b9dae18c60275/R/do.call","/ocpu/tmp/x0b9dae18c60275/graphics/1","/ocpu/tmp/x0b9dae18c60275/stdout","/ocpu/tmp/x0b9dae18c60275/source","/ocpu/tmp/x0b9dae18c60275/console","/ocpu/tmp/x0b9dae18c60275/info","/ocpu/tmp/x0b9dae18c60275/files/DESCRIPTION",""]}
+Processed output: {"randomWalk":{"steps":[-0.5605,-0.2302,1.5587,0.0705,0.1293,1.7151,0.4609,-1.2651,-0.6869,-0.4457,1.2241,0.3598,0.4008,0.1107,-0.5558,1.7869,0.4979,-1.9666,0.7014,-0.4728,-1.0678,-0.218,-1.026,-0.7289,-0.625,-1.6867,0.8378,0.1534,-1.1381,1.2538,0.4265,-0.2951,0.8951,0.8781,0.8216,0.6886,0.5539,-0.0619,-0.306,-0.3805,-0.6947,-0.2079,-1.2654,2.169,1.208,-1.1231,-0.4029,-0.4667,0.78,-0.0834,0.2533,-0.0285,-0.0429,1.3686,-0.2258,1.5165,-1.5488,0.5846,0.1239,0.2159,0.3796,-0.5023,-0.3332,-1.0186,-1.0718,0.3035,0.4482,0.053,0.9223,2.0501,-0.491,-2.3092,1.0057,-0.7092,-0.688,1.0256,-0.2848,-1.2207,0.1813,-0.1389,0.0058,0.3853,-0.3707,0.6444,-0.2205,0.3318,1.0968,0.4352,-0.3259,1.1488,0.9935,0.5484,0.2387,-0.6279,1.3607,-0.6003,2.1873,1.5326,-0.2357,-1.0264],"position":[-0.5605,-0.7907,0.7681,0.8386,0.9679,2.6829,3.1438,1.8788,1.1919,0.7463,1.9703,2.3302,2.7309,2.8416,2.2858,4.0727,4.5705,2.6039,3.3053,2.8325,1.7647,1.5467,0.5207,-0.2082,-0.8333,-2.52,-1.6822,-1.5288,-2.6669,-1.4131,-0.9866,-1.2817,-0.3866,0.4915,1.3131,2.0018,2.5557,2.4938,2.1878,1.8073,1.1126,0.9047,-0.3607,1.8083,3.0162,1.8931,1.4902,1.0236,1.8035,1.7202,1.9735,1.9449,1.9021,3.2707,3.0449,4.5614,3.0126,3.5972,3.7211,3.937,4.3167,3.8144,3.4811,2.4626,1.3908,1.6943,2.1425,2.1955,3.1178,5.1679,4.6768,2.3677,3.3734,2.6642,1.9762,3.0018,2.717,1.4963,1.6776,1.5387,1.5445,1.9297,1.5591,2.2035,1.983,2.3148,3.4116,3.8468,3.5208,4.6696,5.6632,6.2115,6.4503,5.8224,7.183,6.5828,8.7701,10.3027,10.067,9.0406]},"console":"> do.call(what = function() {\n+     set.seed(123)\n+     n <- 100\n+     steps <- rnorm(n)\n+     position <- cumsum(steps)\n+     return(list(steps = steps, position = position))\n+ }, args = args)\nList of length  2 \n[steps]\n[position]","files":[]}
+Processed output: {"simpleResult":[2],"console":"> do.call(what = function() {\n+     return(1 + 1)\n+ }, args = args)\n[1] 2","files":[]}
+Error executing R code: Error: HTTP error! status: 400, message: This is a deliberate error
+
+In call:
+(function () 
+{
+    stop("This is a deliberate error")
+})()
+
+Backtrace:
+    ▆
+ 1. └─base::eval(expr, envir, enclos)
+ 2.   └─base::eval(expr, envir, enclos)
+ 3.     ├─base::do.call(...)
+ 4.     └─`<fn>`()
+ 5.       └─base::stop("This is a deliberate error")
+
+    at OpenCPU.call (/Users/paulinooliveira/Documents/nextjs-chat/opencpu-wrapper/opencpu.ts:71:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/lib/r-execution.ts:47:20)
+    at async testErrorHandling (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:80:18)
+    at async Promise.all (index 3)
+    at async runTests (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:88:23)
+Processed output: {"plotResult":{"x":[1,2,3,4,5,6,7,8,9,10],"y":[1,4,9,16,25,36,49,64,81,100]},"console":"> do.call(what = function() {\n+     x <- 1:10\n+     y <- x^2\n+     plot(x, y, main = \"Square Function\")\n+     return(list(x = x, y = y))\n+ }, args = args)\n[[ plot ]]\nList of length  2 \n[x]\n[y]","files":[]}
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"passeioAleatorio","rFunction":"function() {\n  set.seed(123)\n  n <- 100\n  passeioAleatorio <- cumsum(rnorm(n))\n  return(passeioAleatorio)\n}"}
+Prepared arguments: {}
+Calling opencpuR with rCode: function() {
+  set.seed(123)
+  n <- 100
+  passeioAleatorio <- cumsum(rnorm(n))
+  return(passeioAleatorio)
+}
+Raw result from OpenCPU: {"loc":"http://opencpu.belo.re/ocpu/tmp/x0a70878f57bd42/","key":"x0a70878f57bd42","txt":"/ocpu/tmp/x0a70878f57bd42/R/.val\n/ocpu/tmp/x0a70878f57bd42/R/args\n/ocpu/tmp/x0a70878f57bd42/R/do.call\n/ocpu/tmp/x0a70878f57bd42/stdout\n/ocpu/tmp/x0a70878f57bd42/source\n/ocpu/tmp/x0a70878f57bd42/console\n/ocpu/tmp/x0a70878f57bd42/info\n/ocpu/tmp/x0a70878f57bd42/files/DESCRIPTION\n","output":["/ocpu/tmp/x0a70878f57bd42/R/.val","/ocpu/tmp/x0a70878f57bd42/R/args","/ocpu/tmp/x0a70878f57bd42/R/do.call","/ocpu/tmp/x0a70878f57bd42/stdout","/ocpu/tmp/x0a70878f57bd42/source","/ocpu/tmp/x0a70878f57bd42/console","/ocpu/tmp/x0a70878f57bd42/info","/ocpu/tmp/x0a70878f57bd42/files/DESCRIPTION",""]}
+Processed output: {"passeioAleatorio":[-0.5605,-0.7907,0.7681,0.8386,0.9679,2.6829,3.1438,1.8788,1.1919,0.7463,1.9703,2.3302,2.7309,2.8416,2.2858,4.0727,4.5705,2.6039,3.3053,2.8325,1.7647,1.5467,0.5207,-0.2082,-0.8333,-2.52,-1.6822,-1.5288,-2.6669,-1.4131,-0.9866,-1.2817,-0.3866,0.4915,1.3131,2.0018,2.5557,2.4938,2.1878,1.8073,1.1126,0.9047,-0.3607,1.8083,3.0162,1.8931,1.4902,1.0236,1.8035,1.7202,1.9735,1.9449,1.9021,3.2707,3.0449,4.5614,3.0126,3.5972,3.7211,3.937,4.3167,3.8144,3.4811,2.4626,1.3908,1.6943,2.1425,2.1955,3.1178,5.1679,4.6768,2.3677,3.3734,2.6642,1.9762,3.0018,2.717,1.4963,1.6776,1.5387,1.5445,1.9297,1.5591,2.2035,1.983,2.3148,3.4116,3.8468,3.5208,4.6696,5.6632,6.2115,6.4503,5.8224,7.183,6.5828,8.7701,10.3027,10.067,9.0406],"console":"> do.call(what = function() {\n+     set.seed(123)\n+     n <- 100\n+     passeioAleatorio <- cumsum(rnorm(n))\n+     return(passeioAleatorio)\n+ }, args = args)\n  [1] -0.5604756 -0.7906531  0.7680552  0.8385636  0.9678513  2.6829163\n  [7]  3.1438325  1.8787713  1.1919184  0.7462564  1.9703382  2.3301521\n [13]  2.7309235  2.8416062  2.2857651  4.0726782  4.5705287  2.6039116\n [19]  3.3052675  2.8324760  1.7646523  1.5466774  0.5206730 -0.2082182\n [25] -0.8332575 -2.5199508 -1.6821638 -1.5287907 -2.6669276 -1.4131127\n [31] -0.9866485 -1.2817199 -0.3865943  0.4915392  1.3131203  2.0017605\n [37]  2.5556782  2.4937665  2.1878038  1.8073328  1.1126258  0.9047086\n [43] -0.3606878  1.8082682  3.0162302  1.8931216  1.4902368  1.0235814\n [49]  1.8035465  1.7201775  1.9734960  1.9449492  1.9020788  3.2706810\n [55]  3.0449101  4.5613807  3.0126279  3.5972416  3.7210958  3.9370374\n [61]  4.3166769  3.8143534  3.4811461  2.4625707  1.3907795  1.6943081\n [67]  2.1425179  2.1955221  3.1177896  5.1678743  4.6768431  2.3676742\n [73]  3.3734127  2.6642120  1.9762034  3.0017747  2.7170017  1.4962840\n [79]  1.6775875  1.5386961  1.5444603  1.9297407  1.5590807  2.2034572\n [85]  1.9829707  2.3147526  3.4115916  3.8467731  3.5208415  4.6696492\n [91]  5.6631530  6.2115500  6.4502817  5.8223756  7.1830281  6.5827685\n [97]  8.7701015 10.3027121 10.0670118  9.0405909","files":[]}
