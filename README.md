@@ -12,7 +12,8 @@
   <a href="#model-providers"><strong>Model Providers</strong></a> ·
   <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
   <a href="#running-locally"><strong>Running locally</strong></a> ·
-  <a href="#authors"><strong>Authors</strong></a>
+  <a href="#authors"><strong>Authors</strong></a> ·
+  <a href="#technical-notes"><strong>Technical Notes</strong></a>
 </p>
 <br/>
 
@@ -28,6 +29,7 @@
   - Icons from [Phosphor Icons](https://phosphoricons.com)
 - Chat History, rate limiting, and session storage with [Vercel KV](https://vercel.com/storage/kv)
 - [NextAuth.js](https://github.com/nextauthjs/next-auth) for authentication
+- R code execution using OpenCPU
 
 ## Model Providers
 
@@ -69,3 +71,36 @@ This library is created by [Vercel](https://vercel.com) and [Next.js](https://ne
 - Jared Palmer ([@jaredpalmer](https://twitter.com/jaredpalmer)) - [Vercel](https://vercel.com)
 - Shu Ding ([@shuding\_](https://twitter.com/shuding_)) - [Vercel](https://vercel.com)
 - shadcn ([@shadcn](https://twitter.com/shadcn)) - [Vercel](https://vercel.com)
+
+## Technical Notes
+
+### Script Organization
+
+The project is organized as follows:
+
+- `lib/r-execution.ts`: Contains the core functionality for executing R code using OpenCPU.
+- `lib/chat/message-actions.tsx`: Implements the integration of R code execution with the LLM in the chat application.
+- `lib/chat/ai-config.tsx`: Configures the AI context provider and handles the processing of LLM responses.
+- `pages/api/test-r-execution.ts`: Provides an API endpoint for testing R code execution.
+
+### OpenCPU Integration
+
+The application uses OpenCPU for executing R code. Here's how it's handled:
+
+1. **OpenCPU Wrapper**: We use a custom OpenCPU wrapper (`opencpu-wrapper/opencpu.ts`) that provides a TypeScript interface for interacting with the OpenCPU server.
+
+2. **R Code Execution**: The `executeRCode` function in `lib/r-execution.ts` handles the execution of R code:
+   - It takes a JSON string as input, containing the R function to execute and any necessary parameters.
+   - It uses the OpenCPU wrapper to send the R code to the OpenCPU server for execution.
+   - The function handles errors and returns the execution result as a JSON string.
+
+3. **Integration with LLM**: The `gptR` tool in `lib/chat/message-actions.tsx` allows the LLM to execute R code:
+   - It prepares the input for `executeRCode` based on the LLM's request.
+   - It calls `executeRCode` and processes the result.
+   - The result is then incorporated into the chat flow as a bot message.
+
+4. **Error Handling**: Errors during R code execution are caught and reported back to the user through the chat interface.
+
+5. **Testing**: The `pages/api/test-r-execution.ts` endpoint allows for testing R code execution independently of the chat interface.
+
+This setup allows for seamless integration of R code execution capabilities into the AI chatbot, enabling data analysis and visualization tasks to be performed directly within the chat context.
