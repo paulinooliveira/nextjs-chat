@@ -4,8 +4,8 @@ import fs from 'fs/promises';
 // Initialize fetch for OpenCPU
 initializeFetch();
 
-// Create an OpenCPU instance with the correct URL
-const opencpu = new OpenCPU('https://cloud.opencpu.org/ocpu/library/base/R');
+// Create an OpenCPU instance with default settings
+const opencpu = new OpenCPU();
 
 async function log(message: string) {
   await fs.appendFile('r-execution-log.txt', message + '\n');
@@ -72,4 +72,4 @@ export async function executeRCode(input: string): Promise<string> {
 }
 
 // Log the OpenCPU wrapper initialization
-log('OpenCPU wrapper initialized with custom base URL');
+log('OpenCPU wrapper initialized with default settings');
