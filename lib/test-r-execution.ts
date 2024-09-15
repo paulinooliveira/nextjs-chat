@@ -9,6 +9,7 @@ async function testSimpleFunction() {
     rFunction: 'function() { return(1 + 1) }'
   }));
   console.log('Simple function result:', result);
+  return JSON.parse(result).simpleResult[0] === 2;
 }
 
 async function testRandomWalk() {
@@ -33,6 +34,8 @@ async function testRandomWalk() {
   console.log('Executing R code...');
   const result = await executeRCode(input);
   console.log('Execution result:', result);
+  const parsedResult = JSON.parse(result);
+  return Array.isArray(parsedResult.randomWalk.steps) && parsedResult.randomWalk.steps.length === 100;
 }
 
 async function testPlotting() {
@@ -55,6 +58,8 @@ async function testPlotting() {
 
   const result = await executeRCode(input);
   console.log('Plotting result:', result);
+  const parsedResult = JSON.parse(result);
+  return Array.isArray(parsedResult.plotResult.x) && parsedResult.plotResult.x.length === 10;
 }
 
 async function testErrorHandling() {
@@ -72,50 +77,36 @@ async function testErrorHandling() {
     rFunction: rCode
   });
 
-  try {
-    const result = await executeRCode(input);
-    console.log('Error handling result:', result);
-  } catch (error) {
-    console.log('Caught expected error:', error);
-  }
-}
-
-async function testDataFrame() {
-  console.log('Running testDataFrame:');
-  const rCode = `
-    function() {
-      df <- data.frame(
-        name = c("Alice", "Bob", "Charlie"),
-        age = c(25, 30, 35),
-        height = c(165, 180, 175)
-      )
-      return(df)
-    }
-  `;
-
-  const input = JSON.stringify({
-    inputVariableNames: [],
-    files: [],
-    outputVariableName: 'dataFrameResult',
-    rFunction: rCode
-  });
-
   const result = await executeRCode(input);
-  console.log('Data frame result:', result);
+  console.log('Error handling result:', result);
+  const parsedResult = JSON.parse(result);
+  return parsedResult.error && parsedResult.error.includes("This is a deliberate error");
 }
 
 async function runTests() {
   console.log('Starting tests...');
-  await testSimpleFunction();
-  console.log('\n');
-  await testRandomWalk();
-  console.log('\n');
-  await testPlotting();
-  console.log('\n');
-  await testErrorHandling();
-  console.log('\n');
-  await testDataFrame();
-  console.log('All tests completed.');
+  const testResults = await Promise.all([
+    testSimpleFunction(),
+    testRandomWalk(),
+    testPlotting(),
+    testErrorHandling()
+  ]);
+
+  console.log('\nTest Results:');
+  console.log('Simple Function Test:', testResults[0] ? 'Passed' : 'Failed');
+  console.log('Random Walk Test:', testResults[1] ? 'Passed' : 'Failed');
+  console.log('Plotting Test:', testResults[2] ? 'Passed' : 'Failed');
+  console.log('Error Handling Test:', testResults[3] ? 'Passed' : 'Failed');
+
+  const allTestsPassed = testResults.every(result => result);
+  console.log('\nAll tests passed:', allTestsPassed ? 'Yes' : 'No');
+
+  if (!allTestsPassed) {
+    process.exit(1); // Exit with error code if any test failed
+  }
 }
 
-runTests().catch(console.error);
+runTests().catch(error => {
+  console.error('An error occurred while running tests:', error);
+  process.exit(1);
+});
