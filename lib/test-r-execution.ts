@@ -10,11 +10,9 @@ async function testRExecution() {
     files: ['data.csv'],
     outputVariableName: 'result',
     rFunction: `
-      function(x, y) {
-        # This is a mock R function
-        result <- x + y
-        return(result)
-      }
+      # This is a simple R function
+      result <- x + y
+      return(result)
     `
   };
 
@@ -24,11 +22,9 @@ async function testRExecution() {
     files: [],
     outputVariableName: 'emptyResult',
     rFunction: `
-      function() {
-        # This is a mock R function with no inputs
-        result <- 42
-        return(result)
-      }
+      # This is a mock R function with no inputs
+      result <- 42
+      return(result)
     `
   };
 
@@ -40,9 +36,9 @@ async function testRExecution() {
     console.log('Parsed result 1:', parsedResult1);
 
     // Assertions for test case 1
-    assert.strictEqual(typeof parsedResult1.result, 'string', 'Result should be a string');
-    assert.ok(parsedResult1.result.includes('Mock result for result'), 'Result should contain mock output');
-    assert.ok(parsedResult1.console.includes('Executed R function with inputs: x, y'), 'Console output should mention input variables');
+    assert.strictEqual(typeof parsedResult1.result, 'number', 'Result should be a number');
+    assert.strictEqual(parsedResult1.result, 3, 'Result should be 3 (1 + 2)');
+    assert.ok(parsedResult1.console.includes('No console output'), 'Console output should be present');
     assert.ok(parsedResult1.files.includes('data.csv'), 'Files processed should include data.csv');
 
     // Test case 2
@@ -52,9 +48,9 @@ async function testRExecution() {
     console.log('Parsed result 2:', parsedResult2);
 
     // Assertions for test case 2
-    assert.strictEqual(typeof parsedResult2.result, 'string', 'Result should be a string');
-    assert.ok(parsedResult2.result.includes('Mock result for emptyResult'), 'Result should contain mock output for emptyResult');
-    assert.ok(parsedResult2.console.includes('Executed R function with inputs:'), 'Console output should not mention any input variables');
+    assert.strictEqual(typeof parsedResult2.emptyResult, 'number', 'Result should be a number');
+    assert.strictEqual(parsedResult2.emptyResult, 42, 'Result should be 42');
+    assert.ok(parsedResult2.console.includes('No console output'), 'Console output should be present');
     assert.strictEqual(parsedResult2.files, 'No files processed', 'No files should be processed');
 
     console.log('All tests passed successfully!');

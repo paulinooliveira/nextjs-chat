@@ -1,4 +1,7 @@
-// R Execution functionality
+import { OpenCPU, r } from '../opencpu-wrapper/opencpu.js';
+
+// Initialize OpenCPU
+const ocpu = new OpenCPU('https://cloud.opencpu.org');
 
 // Define the structure of the input expected by the R execution function
 interface RExecutionInput {
@@ -21,20 +24,24 @@ export async function executeRCode(input: string): Promise<string> {
 
     console.log('Executing R code with input:', parsedInput);
     
-    // TODO: Implement actual R code execution
-    // This is a placeholder implementation
-    
-    // Simulate R code execution with a delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Generate a mock result
-    const mockResult = {
-      result: `Mock result for ${outputVariableName}`,
-      console: `[1] "Executed R function with inputs: ${inputVariableNames.join(', ')}"`,
+    // Prepare the R function
+    const rCode = `
+      function(${inputVariableNames.join(', ')}) {
+        ${rFunction}
+      }
+    `;
+
+    // Execute the R function
+    const result = await ocpu.execute(rCode, inputVariableNames);
+
+    // Prepare the output
+    const output = {
+      [outputVariableName]: result,
+      console: result.console || 'No console output',
       files: files.length > 0 ? `Processed files: ${files.join(', ')}` : 'No files processed'
     };
 
-    return JSON.stringify(mockResult);
+    return JSON.stringify(output);
   } catch (error) {
     console.error('Error executing R code:', error);
     return JSON.stringify({ error: error.message });
