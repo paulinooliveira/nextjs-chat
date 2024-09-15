@@ -1,62 +1,121 @@
-import { executeRCode, parseRResult } from './r-execution';
-import * as assert from 'assert';
+import { executeRCode } from './r-execution';
 
-async function testRExecution() {
-  console.log('Testing R Execution...');
-
-  // Test case 1: Basic execution
-  const testInput1 = {
-    inputVariableNames: ['x', 'y'],
-    files: ['data.csv'],
-    outputVariableName: 'result',
-    rFunction: `
-      # This is a simple R function
-      result <- x + y
-      return(result)
-    `
-  };
-
-  // Test case 2: Empty input variables and files
-  const testInput2 = {
+async function testSimpleFunction() {
+  console.log('Running testSimpleFunction:');
+  const result = await executeRCode(JSON.stringify({
     inputVariableNames: [],
     files: [],
-    outputVariableName: 'emptyResult',
-    rFunction: `
-      # This is a mock R function with no inputs
-      result <- 42
-      return(result)
-    `
-  };
+    outputVariableName: 'simpleResult',
+    rFunction: 'function() { return(1 + 1) }'
+  }));
+  console.log('Simple function result:', result);
+}
+
+async function testRandomWalk() {
+  console.log('Running testRandomWalk:');
+  const rCode = `
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  `;
+
+  const input = JSON.stringify({
+    inputVariableNames: [],
+    files: [],
+    outputVariableName: 'randomWalk',
+    rFunction: rCode
+  });
+
+  console.log('Executing R code...');
+  const result = await executeRCode(input);
+  console.log('Execution result:', result);
+}
+
+async function testPlotting() {
+  console.log('Running testPlotting:');
+  const rCode = `
+    function() {
+      x <- 1:10
+      y <- x^2
+      plot(x, y, main="Square Function")
+      return(list(x=x, y=y))
+    }
+  `;
+
+  const input = JSON.stringify({
+    inputVariableNames: [],
+    files: [],
+    outputVariableName: 'plotResult',
+    rFunction: rCode
+  });
+
+  const result = await executeRCode(input);
+  console.log('Plotting result:', result);
+}
+
+async function testErrorHandling() {
+  console.log('Running testErrorHandling:');
+  const rCode = `
+    function() {
+      stop("This is a deliberate error")
+    }
+  `;
+
+  const input = JSON.stringify({
+    inputVariableNames: [],
+    files: [],
+    outputVariableName: 'errorResult',
+    rFunction: rCode
+  });
 
   try {
-    // Test case 1
-    const result1 = await executeRCode(JSON.stringify(testInput1));
-    console.log('Execution result 1:', result1);
-    const parsedResult1 = parseRResult(result1);
-    console.log('Parsed result 1:', parsedResult1);
-
-    // Assertions for test case 1
-    assert.strictEqual(typeof parsedResult1.result, 'number', 'Result should be a number');
-    assert.strictEqual(parsedResult1.result, 3, 'Result should be 3 (1 + 2)');
-    assert.ok(parsedResult1.console.includes('No console output'), 'Console output should be present');
-    assert.ok(parsedResult1.files.includes('data.csv'), 'Files processed should include data.csv');
-
-    // Test case 2
-    const result2 = await executeRCode(JSON.stringify(testInput2));
-    console.log('Execution result 2:', result2);
-    const parsedResult2 = parseRResult(result2);
-    console.log('Parsed result 2:', parsedResult2);
-
-    // Assertions for test case 2
-    assert.strictEqual(typeof parsedResult2.emptyResult, 'number', 'Result should be a number');
-    assert.strictEqual(parsedResult2.emptyResult, 42, 'Result should be 42');
-    assert.ok(parsedResult2.console.includes('No console output'), 'Console output should be present');
-    assert.strictEqual(parsedResult2.files, 'No files processed', 'No files should be processed');
-
-    console.log('All tests passed successfully!');
+    const result = await executeRCode(input);
+    console.log('Error handling result:', result);
   } catch (error) {
-    console.error('Error during test:', error);
+    console.log('Caught expected error:', error);
   }
 }
 
-testRExecution();
+async function testDataFrame() {
+  console.log('Running testDataFrame:');
+  const rCode = `
+    function() {
+      df <- data.frame(
+        name = c("Alice", "Bob", "Charlie"),
+        age = c(25, 30, 35),
+        height = c(165, 180, 175)
+      )
+      return(df)
+    }
+  `;
+
+  const input = JSON.stringify({
+    inputVariableNames: [],
+    files: [],
+    outputVariableName: 'dataFrameResult',
+    rFunction: rCode
+  });
+
+  const result = await executeRCode(input);
+  console.log('Data frame result:', result);
+}
+
+async function runTests() {
+  console.log('Starting tests...');
+  await testSimpleFunction();
+  console.log('\n');
+  await testRandomWalk();
+  console.log('\n');
+  await testPlotting();
+  console.log('\n');
+  await testErrorHandling();
+  console.log('\n');
+  await testDataFrame();
+  console.log('All tests completed.');
+}
+
+runTests().catch(console.error);

@@ -1,0 +1,1578 @@
+Fallback OpenCPU URL: https://public.opencpu.org/ocpu/library/base/R
+Primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Trying primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://cloud.opencpu.org/ocpu/library/base/R
+OpenCPU instance: {"baseUrl":"https://cloud.opencpu.org/ocpu/library/base/R"}
+R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Arguments: {}
+Files: []
+Actual request URL: https://cloud.opencpu.org/ocpu/library/base/R/do.call
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Primary OpenCPU URL failed, trying fallback URL: https://public.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://public.opencpu.org/ocpu/library/base/R
+OpenCPU instance: {"baseUrl":"https://public.opencpu.org/ocpu/library/base/R"}
+R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Arguments: {}
+Files: []
+Actual request URL: https://public.opencpu.org/ocpu/library/base/R/do.call
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:274:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:364:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+Primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Fallback OpenCPU URL: https://public.opencpu.org/ocpu/library/base/R
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Trying primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://cloud.opencpu.org/ocpu/library/base/R
+OpenCPU instance: {"baseUrl":"https://cloud.opencpu.org/ocpu/library/base/R"}
+R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Arguments: {}
+Files: []
+Actual request URL: https://cloud.opencpu.org/ocpu/library/base/R/do.call
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: object 'R' not found\n\nIn call:\nget(reqobject, paste(\"package\", reqpackage, sep = \":\"), inherits = FALSE)"}
+Primary OpenCPU URL failed, trying fallback URL: https://public.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://public.opencpu.org/ocpu/library/base/R
+OpenCPU instance: {"baseUrl":"https://public.opencpu.org/ocpu/library/base/R"}
+R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Arguments: {}
+Files: []
+Actual request URL: https://public.opencpu.org/ocpu/library/base/R/do.call
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: object 'R' not found\n\nIn call:\nget(reqobject, paste(\"package\", reqpackage, sep = \":\"), inherits = FALSE)"}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: object 'R' not found\n\nIn call:\nget(reqobject, paste(\"package\", reqpackage, sep = \":\"), inherits = FALSE)"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 400, message: object 'R' not found
+
+In call:
+get(reqobject, paste("package", reqpackage, sep = ":"), inherits = FALSE)
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:274:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:364:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Trying primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://cloud.opencpu.org/ocpu/library/base/R
+OpenCPU instance: {"baseUrl":"https://cloud.opencpu.org/ocpu/library/base/R"}
+R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Arguments: {}
+Files: []
+Actual request URL: https://cloud.opencpu.org/ocpu/library/base/R/do.call
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: object 'R' not found\n\nIn call:\nget(reqobject, paste(\"package\", reqpackage, sep = \":\"), inherits = FALSE)"}
+Primary OpenCPU URL failed, trying fallback URL: https://public.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://public.opencpu.org/ocpu/library/base/R
+OpenCPU instance: {"baseUrl":"https://public.opencpu.org/ocpu/library/base/R"}
+R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Arguments: {}
+Files: []
+Actual request URL: https://public.opencpu.org/ocpu/library/base/R/do.call
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: object 'R' not found\n\nIn call:\nget(reqobject, paste(\"package\", reqpackage, sep = \":\"), inherits = FALSE)"}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: object 'R' not found\n\nIn call:\nget(reqobject, paste(\"package\", reqpackage, sep = \":\"), inherits = FALSE)"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 400, message: object 'R' not found
+
+In call:
+get(reqobject, paste("package", reqpackage, sep = ":"), inherits = FALSE)
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:274:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:364:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+Fallback OpenCPU URL: https://public.opencpu.org/ocpu/library/base/R
+Primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Trying primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://cloud.opencpu.org/ocpu/library/base/R
+R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Primary OpenCPU URL failed, trying fallback URL: https://public.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://public.opencpu.org/ocpu/library/base/R
+R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 400, message: could not find function "\n      function() {\n        tryCatch({\n          \n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  \n        }, error = function(e) {\n          stop(paste("R Error:", e$message))\n        })\n      }\n    "
+
+In call:
+`\n      function() {\n        tryCatch({\n          \n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  \n        }, error = function(e) {\n          stop(paste("R Error:", e$message))\n        })\n      }\n    `()
+
+Backtrace:
+    ▆
+ 1. └─base::eval(expr, envir, enclos)
+ 2.   └─base::eval(expr, envir, enclos)
+ 3.     ├─base::do.call(what = do.call, args = args)
+ 4.     └─base (local) `<fn>`(...)
+
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:273:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:359:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Trying primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://cloud.opencpu.org/ocpu/library/base/R
+R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Primary OpenCPU URL failed, trying fallback URL: https://public.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://public.opencpu.org/ocpu/library/base/R
+R code: 
+      function() {
+        tryCatch({
+          
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+        }, error = function(e) {
+          stop(paste("R Error:", e$message))
+        })
+      }
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 400, message: could not find function "\n      function() {\n        tryCatch({\n          \n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  \n        }, error = function(e) {\n          stop(paste("R Error:", e$message))\n        })\n      }\n    "
+
+In call:
+`\n      function() {\n        tryCatch({\n          \n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  \n        }, error = function(e) {\n          stop(paste("R Error:", e$message))\n        })\n      }\n    `()
+
+Backtrace:
+    ▆
+ 1. └─base::eval(expr, envir, enclos)
+ 2.   └─base::eval(expr, envir, enclos)
+ 3.     ├─base::do.call(what = do.call, args = args)
+ 4.     └─base (local) `<fn>`(...)
+
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:273:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:359:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+Primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Fallback OpenCPU URL: https://public.opencpu.org/ocpu/library/base/R
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Trying primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://cloud.opencpu.org/ocpu/library/base/R
+R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Primary OpenCPU URL failed, trying fallback URL: https://public.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://public.opencpu.org/ocpu/library/base/R
+R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 400, message: could not find function "\n      function() {\n        \n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  \n      }\n    "
+
+In call:
+`\n      function() {\n        \n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  \n      }\n    `()
+
+Backtrace:
+    ▆
+ 1. └─base::eval(expr, envir, enclos)
+ 2.   └─base::eval(expr, envir, enclos)
+ 3.     ├─base::do.call(what = do.call, args = args)
+ 4.     └─base (local) `<fn>`(...)
+
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:269:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:355:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Trying primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://cloud.opencpu.org/ocpu/library/base/R
+R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Primary OpenCPU URL failed, trying fallback URL: https://public.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://public.opencpu.org/ocpu/library/base/R
+R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 400, message: could not find function "\n      function() {\n        \n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  \n      }\n    "
+
+In call:
+`\n      function() {\n        \n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  \n      }\n    `()
+
+Backtrace:
+    ▆
+ 1. └─base::eval(expr, envir, enclos)
+ 2.   └─base::eval(expr, envir, enclos)
+ 3.     ├─base::do.call(what = do.call, args = args)
+ 4.     └─base (local) `<fn>`(...)
+
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:269:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:355:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+Primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Fallback OpenCPU URL: https://public.opencpu.org/ocpu/library/base/R
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared R code: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+Trying primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://cloud.opencpu.org/ocpu/library/base/R
+R code: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+Arguments: {}
+Files: []
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \"\n\nIn call:\n`\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Primary OpenCPU URL failed, trying fallback URL: https://public.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://public.opencpu.org/ocpu/library/base/R
+R code: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+Arguments: {}
+Files: []
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \"\n\nIn call:\n`\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \"\n\nIn call:\n`\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 400, message: could not find function "\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "
+
+In call:
+`\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  `()
+
+Backtrace:
+    ▆
+ 1. └─base::eval(expr, envir, enclos)
+ 2.   └─base::eval(expr, envir, enclos)
+ 3.     ├─base::do.call(what = do.call, args = args)
+ 4.     └─base (local) `<fn>`(...)
+
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:265:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:351:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+Primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Fallback OpenCPU URL: https://public.opencpu.org/ocpu/library/base/R
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared R code: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+Trying primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://cloud.opencpu.org/ocpu/library/base/R
+R code: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+Arguments: {}
+Files: []
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \"\n\nIn call:\n`\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Primary OpenCPU URL failed, trying fallback URL: https://public.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://public.opencpu.org/ocpu/library/base/R
+R code: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+Arguments: {}
+Files: []
+R execution result: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \"\n\nIn call:\n`\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: could not find function \"\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \"\n\nIn call:\n`\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 400, message: could not find function "\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "
+
+In call:
+`\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  `()
+
+Backtrace:
+    ▆
+ 1. └─base::eval(expr, envir, enclos)
+ 2.   └─base::eval(expr, envir, enclos)
+ 3.     ├─base::do.call(what = do.call, args = args)
+ 4.     └─base (local) `<fn>`(...)
+
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:265:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_7b8f69._.js:351:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+Primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Fallback OpenCPU URL: https://public.opencpu.org/ocpu/library/base/R
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Trying primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://cloud.opencpu.org/ocpu/library/base/R
+R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Primary OpenCPU URL failed, trying fallback URL: https://public.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://public.opencpu.org/ocpu/library/base/R
+R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Raw result from OpenCPU: {"console":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_cb9a68._.js:248:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_cb9a68._.js:328:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+Primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Fallback OpenCPU URL: https://public.opencpu.org/ocpu/library/base/R
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Trying primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://cloud.opencpu.org/ocpu/library/base/R
+R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Primary OpenCPU URL failed, trying fallback URL: https://public.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://public.opencpu.org/ocpu/library/base/R
+R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Raw result from OpenCPU: {"console":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_cb9a68._.js:248:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_cb9a68._.js:328:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+Primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Fallback OpenCPU URL: https://public.opencpu.org/ocpu/library/base/R
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared R code: 
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      list(steps = steps, position = position)
+    
+Trying primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://cloud.opencpu.org/ocpu/library/base/R
+R code: 
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      list(steps = steps, position = position)
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: 'what' must be a function or character string\n\nIn call:\ndo.call(what = {\n    set.seed(123)\n    n <- 100\n    steps <- rnorm(n)\n    position <- cumsum(steps)\n    list(steps = steps, position = position)\n}, args = args)\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     └─base::do.call(...)\n"}
+Primary OpenCPU URL failed, trying fallback URL: https://public.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://public.opencpu.org/ocpu/library/base/R
+R code: 
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      list(steps = steps, position = position)
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: 'what' must be a function or character string\n\nIn call:\ndo.call(what = {\n    set.seed(123)\n    n <- 100\n    steps <- rnorm(n)\n    position <- cumsum(steps)\n    list(steps = steps, position = position)\n}, args = args)\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     └─base::do.call(...)\n"}
+Raw result from OpenCPU: {"console":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: 'what' must be a function or character string\n\nIn call:\ndo.call(what = {\n    set.seed(123)\n    n <- 100\n    steps <- rnorm(n)\n    position <- cumsum(steps)\n    list(steps = steps, position = position)\n}, args = args)\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     └─base::do.call(...)\n"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 400, message: 'what' must be a function or character string
+
+In call:
+do.call(what = {
+    set.seed(123)
+    n <- 100
+    steps <- rnorm(n)
+    position <- cumsum(steps)
+    list(steps = steps, position = position)
+}, args = args)
+
+Backtrace:
+    ▆
+ 1. └─base::eval(expr, envir, enclos)
+ 2.   └─base::eval(expr, envir, enclos)
+ 3.     └─base::do.call(...)
+
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_cb9a68._.js:250:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_cb9a68._.js:330:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+Fallback OpenCPU URL: https://public.opencpu.org/ocpu/library/base/R
+Primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Trying primary OpenCPU URL: https://cloud.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://cloud.opencpu.org/ocpu/library/base/R
+R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Primary OpenCPU URL failed, trying fallback URL: https://public.opencpu.org/ocpu/library/base/R
+Attempting to execute R code with URL: https://public.opencpu.org/ocpu/library/base/R
+R code: 
+      function() {
+        
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+      }
+    
+Arguments: {}
+Files: []
+R execution result: {"console":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Raw result from OpenCPU: {"console":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_cb9a68._.js:248:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_cb9a68._.js:330:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+OpenCPU wrapper initialized
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:266:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:327:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:266:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:327:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+OpenCPU wrapper initialized
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:267:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:328:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:267:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:328:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+OpenCPU wrapper initialized
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    set.seed(123)  # for reproducibility\n    n <- 100\n    steps <- rnorm(n)\n    position <- cumsum(steps)\n    list(steps = steps, position = position)\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: 'what' must be a function or character string\n\nIn call:\ndo.call(what = {\n    set.seed(123)\n    n <- 100\n    steps <- rnorm(n)\n    position <- cumsum(steps)\n    list(steps = steps, position = position)\n}, args = args)\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     └─base::do.call(...)\n"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 400, message: 'what' must be a function or character string
+
+In call:
+do.call(what = {
+    set.seed(123)
+    n <- 100
+    steps <- rnorm(n)
+    position <- cumsum(steps)
+    list(steps = steps, position = position)
+}, args = args)
+
+Backtrace:
+    ▆
+ 1. └─base::eval(expr, envir, enclos)
+ 2.   └─base::eval(expr, envir, enclos)
+ 3.     └─base::do.call(...)
+
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:267:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:326:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+OpenCPU wrapper initialized
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"numeroAleatorio","rFunction":"function() { numero <- runif(1, 0, 100); return(numero) }"}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_b6755f._.js:2100:19)
+    at async generate (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_b6755f._.js:2319:36)
+    at async render2 (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_0a5745._.js:1326:41)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"passeioAleatorio","rFunction":"function() {\n  set.seed(123)\n  passeioAleatorio <- cumsum(rnorm(100))\n  return(passeioAleatorio)\n}"}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_b6755f._.js:2100:19)
+    at async generate (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_b6755f._.js:2319:36)
+    at async render2 (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/ssr/_0a5745._.js:1326:41)
+OpenCPU wrapper initialized
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:267:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:328:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:267:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:328:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:267:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:328:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+OpenCPU wrapper initialized
+OpenCPU wrapper initialized
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:284:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:345:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:284:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:345:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+OpenCPU wrapper initialized
+OpenCPU wrapper initialized
+OpenCPU wrapper initialized
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:265:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:326:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:265:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:326:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+OpenCPU wrapper initialized
+OpenCPU wrapper initialized
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:267:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:328:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+OpenCPU wrapper initialized
+OpenCPU wrapper initialized
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Prepared arguments: {}
+Calling opencpuR with rCode: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      list(steps = steps, position = position)
+    }
+  
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:269:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:330:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+OpenCPU wrapper initialized
+OpenCPU wrapper initialized
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:267:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:328:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:267:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:328:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:267:19)
+    at async handler (/Users/paulinooliveira/Documents/nextjs-chat/.next/server/chunks/_bca299._.js:328:24)
+    at async K (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:600:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/paulinooliveira/Documents/nextjs-chat/node_modules/.pnpm/next@14.2.6_@opentelemetry+api@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/lib/start-server.js:141:13)
+OpenCPU wrapper initialized
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/lib/r-execution.ts:49:13)
+    at async testRandomWalk (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:23:18)
+    at async runTests (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:61:3)
+OpenCPU wrapper initialized
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"simpleResult","rFunction":"function() { return 1 + 1 }"}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: Unparsable argument: function() { return 1 + 1 }"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 400, message: Unparsable argument: function() { return 1 + 1 }
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/lib/r-execution.ts:49:13)
+    at async testSimpleFunction (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:5:18)
+    at async runTests (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:40:3)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/lib/r-execution.ts:49:13)
+    at async testRandomWalk (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:34:18)
+    at async runTests (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:42:3)
+OpenCPU wrapper initialized with custom base URL
+OpenCPU wrapper initialized with custom base URL
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"simpleResult","rFunction":"function() { return 1 + 1 }"}
+Prepared arguments: {}
+Calling opencpuR with rCode: function() { return 1 + 1 }
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 400, message: Unparsable argument: function() { return 1 + 1 }"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 400, message: Unparsable argument: function() { return 1 + 1 }
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/lib/r-execution.ts:52:13)
+    at async testSimpleFunction (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:5:18)
+    at async runTests (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:40:3)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared arguments: {}
+Calling opencpuR with rCode: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+Raw result from OpenCPU: {"console":null,"consoleOut":null,"consoleIn":null,"json":null,"chartPng":null,"chartSvg":null,"files":null,"error":"HTTP error! status: 404"}
+Error executing R code: Error: OpenCPU error: HTTP error! status: 404
+    at executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/lib/r-execution.ts:52:13)
+    at async testRandomWalk (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:34:18)
+    at async runTests (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:42:3)
+OpenCPU wrapper initialized with custom base URL
+OpenCPU wrapper initialized with custom base URL
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"simpleResult","rFunction":"function() { return 1 + 1 }"}
+Prepared arguments: {}
+Calling opencpuR with rCode: function() { return 1 + 1 }
+Error executing R code: Error: HTTP error! status: 400, message: Unparsable argument: function() { return 1 + 1 }
+    at OpenCPU.call (/Users/paulinooliveira/Documents/nextjs-chat/opencpu-wrapper/opencpu.ts:71:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/lib/r-execution.ts:47:20)
+    at async testSimpleFunction (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:5:18)
+    at async runTests (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:40:3)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared arguments: {}
+Calling opencpuR with rCode: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+Raw result from OpenCPU: {"loc":"https://cloud.opencpu.org/ocpu/tmp/x01e24d3638ca18/","key":"x01e24d3638ca18","txt":"/ocpu/tmp/x01e24d3638ca18/R/.val\n/ocpu/tmp/x01e24d3638ca18/R/args\n/ocpu/tmp/x01e24d3638ca18/R/do.call\n/ocpu/tmp/x01e24d3638ca18/stdout\n/ocpu/tmp/x01e24d3638ca18/source\n/ocpu/tmp/x01e24d3638ca18/console\n/ocpu/tmp/x01e24d3638ca18/info\n/ocpu/tmp/x01e24d3638ca18/files/DESCRIPTION\n","output":["/ocpu/tmp/x01e24d3638ca18/R/.val","/ocpu/tmp/x01e24d3638ca18/R/args","/ocpu/tmp/x01e24d3638ca18/R/do.call","/ocpu/tmp/x01e24d3638ca18/stdout","/ocpu/tmp/x01e24d3638ca18/source","/ocpu/tmp/x01e24d3638ca18/console","/ocpu/tmp/x01e24d3638ca18/info","/ocpu/tmp/x01e24d3638ca18/files/DESCRIPTION",""]}
+Processed output: {"randomWalk":{"steps":[-0.5605,-0.2302,1.5587,0.0705,0.1293,1.7151,0.4609,-1.2651,-0.6869,-0.4457,1.2241,0.3598,0.4008,0.1107,-0.5558,1.7869,0.4979,-1.9666,0.7014,-0.4728,-1.0678,-0.218,-1.026,-0.7289,-0.625,-1.6867,0.8378,0.1534,-1.1381,1.2538,0.4265,-0.2951,0.8951,0.8781,0.8216,0.6886,0.5539,-0.0619,-0.306,-0.3805,-0.6947,-0.2079,-1.2654,2.169,1.208,-1.1231,-0.4029,-0.4667,0.78,-0.0834,0.2533,-0.0285,-0.0429,1.3686,-0.2258,1.5165,-1.5488,0.5846,0.1239,0.2159,0.3796,-0.5023,-0.3332,-1.0186,-1.0718,0.3035,0.4482,0.053,0.9223,2.0501,-0.491,-2.3092,1.0057,-0.7092,-0.688,1.0256,-0.2848,-1.2207,0.1813,-0.1389,0.0058,0.3853,-0.3707,0.6444,-0.2205,0.3318,1.0968,0.4352,-0.3259,1.1488,0.9935,0.5484,0.2387,-0.6279,1.3607,-0.6003,2.1873,1.5326,-0.2357,-1.0264],"position":[-0.5605,-0.7907,0.7681,0.8386,0.9679,2.6829,3.1438,1.8788,1.1919,0.7463,1.9703,2.3302,2.7309,2.8416,2.2858,4.0727,4.5705,2.6039,3.3053,2.8325,1.7647,1.5467,0.5207,-0.2082,-0.8333,-2.52,-1.6822,-1.5288,-2.6669,-1.4131,-0.9866,-1.2817,-0.3866,0.4915,1.3131,2.0018,2.5557,2.4938,2.1878,1.8073,1.1126,0.9047,-0.3607,1.8083,3.0162,1.8931,1.4902,1.0236,1.8035,1.7202,1.9735,1.9449,1.9021,3.2707,3.0449,4.5614,3.0126,3.5972,3.7211,3.937,4.3167,3.8144,3.4811,2.4626,1.3908,1.6943,2.1425,2.1955,3.1178,5.1679,4.6768,2.3677,3.3734,2.6642,1.9762,3.0018,2.717,1.4963,1.6776,1.5387,1.5445,1.9297,1.5591,2.2035,1.983,2.3148,3.4116,3.8468,3.5208,4.6696,5.6632,6.2115,6.4503,5.8224,7.183,6.5828,8.7701,10.3027,10.067,9.0406]},"console":"> do.call(what = function() {\n+     set.seed(123)\n+     n <- 100\n+     steps <- rnorm(n)\n+     position <- cumsum(steps)\n+     return(list(steps = steps, position = position))\n+ }, args = args)\nList of length  2 \n[steps]\n[position]","files":[]}
+OpenCPU wrapper initialized with custom base URL
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"simpleResult","rFunction":"function() { return(1 + 1) }"}
+Prepared arguments: {}
+Calling opencpuR with rCode: function() { return(1 + 1) }
+Raw result from OpenCPU: {"loc":"https://cloud.opencpu.org/ocpu/tmp/x0732630ca9b62d/","key":"x0732630ca9b62d","txt":"/ocpu/tmp/x0732630ca9b62d/R/.val\n/ocpu/tmp/x0732630ca9b62d/R/args\n/ocpu/tmp/x0732630ca9b62d/R/do.call\n/ocpu/tmp/x0732630ca9b62d/stdout\n/ocpu/tmp/x0732630ca9b62d/source\n/ocpu/tmp/x0732630ca9b62d/console\n/ocpu/tmp/x0732630ca9b62d/info\n/ocpu/tmp/x0732630ca9b62d/files/DESCRIPTION\n","output":["/ocpu/tmp/x0732630ca9b62d/R/.val","/ocpu/tmp/x0732630ca9b62d/R/args","/ocpu/tmp/x0732630ca9b62d/R/do.call","/ocpu/tmp/x0732630ca9b62d/stdout","/ocpu/tmp/x0732630ca9b62d/source","/ocpu/tmp/x0732630ca9b62d/console","/ocpu/tmp/x0732630ca9b62d/info","/ocpu/tmp/x0732630ca9b62d/files/DESCRIPTION",""]}
+Processed output: {"simpleResult":[2],"console":"> do.call(what = function() {\n+     return(1 + 1)\n+ }, args = args)\n[1] 2","files":[]}
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared arguments: {}
+Calling opencpuR with rCode: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+Raw result from OpenCPU: {"loc":"https://cloud.opencpu.org/ocpu/tmp/x01e24d3638ca18/","key":"x01e24d3638ca18","txt":"/ocpu/tmp/x01e24d3638ca18/R/.val\n/ocpu/tmp/x01e24d3638ca18/R/args\n/ocpu/tmp/x01e24d3638ca18/R/do.call\n/ocpu/tmp/x01e24d3638ca18/stdout\n/ocpu/tmp/x01e24d3638ca18/source\n/ocpu/tmp/x01e24d3638ca18/console\n/ocpu/tmp/x01e24d3638ca18/info\n/ocpu/tmp/x01e24d3638ca18/files/DESCRIPTION\n","output":["/ocpu/tmp/x01e24d3638ca18/R/.val","/ocpu/tmp/x01e24d3638ca18/R/args","/ocpu/tmp/x01e24d3638ca18/R/do.call","/ocpu/tmp/x01e24d3638ca18/stdout","/ocpu/tmp/x01e24d3638ca18/source","/ocpu/tmp/x01e24d3638ca18/console","/ocpu/tmp/x01e24d3638ca18/info","/ocpu/tmp/x01e24d3638ca18/files/DESCRIPTION",""]}
+Processed output: {"randomWalk":{"steps":[-0.5605,-0.2302,1.5587,0.0705,0.1293,1.7151,0.4609,-1.2651,-0.6869,-0.4457,1.2241,0.3598,0.4008,0.1107,-0.5558,1.7869,0.4979,-1.9666,0.7014,-0.4728,-1.0678,-0.218,-1.026,-0.7289,-0.625,-1.6867,0.8378,0.1534,-1.1381,1.2538,0.4265,-0.2951,0.8951,0.8781,0.8216,0.6886,0.5539,-0.0619,-0.306,-0.3805,-0.6947,-0.2079,-1.2654,2.169,1.208,-1.1231,-0.4029,-0.4667,0.78,-0.0834,0.2533,-0.0285,-0.0429,1.3686,-0.2258,1.5165,-1.5488,0.5846,0.1239,0.2159,0.3796,-0.5023,-0.3332,-1.0186,-1.0718,0.3035,0.4482,0.053,0.9223,2.0501,-0.491,-2.3092,1.0057,-0.7092,-0.688,1.0256,-0.2848,-1.2207,0.1813,-0.1389,0.0058,0.3853,-0.3707,0.6444,-0.2205,0.3318,1.0968,0.4352,-0.3259,1.1488,0.9935,0.5484,0.2387,-0.6279,1.3607,-0.6003,2.1873,1.5326,-0.2357,-1.0264],"position":[-0.5605,-0.7907,0.7681,0.8386,0.9679,2.6829,3.1438,1.8788,1.1919,0.7463,1.9703,2.3302,2.7309,2.8416,2.2858,4.0727,4.5705,2.6039,3.3053,2.8325,1.7647,1.5467,0.5207,-0.2082,-0.8333,-2.52,-1.6822,-1.5288,-2.6669,-1.4131,-0.9866,-1.2817,-0.3866,0.4915,1.3131,2.0018,2.5557,2.4938,2.1878,1.8073,1.1126,0.9047,-0.3607,1.8083,3.0162,1.8931,1.4902,1.0236,1.8035,1.7202,1.9735,1.9449,1.9021,3.2707,3.0449,4.5614,3.0126,3.5972,3.7211,3.937,4.3167,3.8144,3.4811,2.4626,1.3908,1.6943,2.1425,2.1955,3.1178,5.1679,4.6768,2.3677,3.3734,2.6642,1.9762,3.0018,2.717,1.4963,1.6776,1.5387,1.5445,1.9297,1.5591,2.2035,1.983,2.3148,3.4116,3.8468,3.5208,4.6696,5.6632,6.2115,6.4503,5.8224,7.183,6.5828,8.7701,10.3027,10.067,9.0406]},"console":"> do.call(what = function() {\n+     set.seed(123)\n+     n <- 100\n+     steps <- rnorm(n)\n+     position <- cumsum(steps)\n+     return(list(steps = steps, position = position))\n+ }, args = args)\nList of length  2 \n[steps]\n[position]","files":[]}
+OpenCPU wrapper initialized with custom base URL
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"simpleResult","rFunction":"function() { return(1 + 1) }"}
+Prepared arguments: {}
+Calling opencpuR with rCode: function() { return(1 + 1) }
+Raw result from OpenCPU: {"loc":"https://cloud.opencpu.org/ocpu/tmp/x0732630ca9b62d/","key":"x0732630ca9b62d","txt":"/ocpu/tmp/x0732630ca9b62d/R/.val\n/ocpu/tmp/x0732630ca9b62d/R/args\n/ocpu/tmp/x0732630ca9b62d/R/do.call\n/ocpu/tmp/x0732630ca9b62d/stdout\n/ocpu/tmp/x0732630ca9b62d/source\n/ocpu/tmp/x0732630ca9b62d/console\n/ocpu/tmp/x0732630ca9b62d/info\n/ocpu/tmp/x0732630ca9b62d/files/DESCRIPTION\n","output":["/ocpu/tmp/x0732630ca9b62d/R/.val","/ocpu/tmp/x0732630ca9b62d/R/args","/ocpu/tmp/x0732630ca9b62d/R/do.call","/ocpu/tmp/x0732630ca9b62d/stdout","/ocpu/tmp/x0732630ca9b62d/source","/ocpu/tmp/x0732630ca9b62d/console","/ocpu/tmp/x0732630ca9b62d/info","/ocpu/tmp/x0732630ca9b62d/files/DESCRIPTION",""]}
+Processed output: {"simpleResult":[2],"console":"> do.call(what = function() {\n+     return(1 + 1)\n+ }, args = args)\n[1] 2","files":[]}
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared arguments: {}
+Calling opencpuR with rCode: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      return(list(steps = steps, position = position))
+    }
+  
+Raw result from OpenCPU: {"loc":"https://cloud.opencpu.org/ocpu/tmp/x01e24d3638ca18/","key":"x01e24d3638ca18","txt":"/ocpu/tmp/x01e24d3638ca18/R/.val\n/ocpu/tmp/x01e24d3638ca18/R/args\n/ocpu/tmp/x01e24d3638ca18/R/do.call\n/ocpu/tmp/x01e24d3638ca18/stdout\n/ocpu/tmp/x01e24d3638ca18/source\n/ocpu/tmp/x01e24d3638ca18/console\n/ocpu/tmp/x01e24d3638ca18/info\n/ocpu/tmp/x01e24d3638ca18/files/DESCRIPTION\n","output":["/ocpu/tmp/x01e24d3638ca18/R/.val","/ocpu/tmp/x01e24d3638ca18/R/args","/ocpu/tmp/x01e24d3638ca18/R/do.call","/ocpu/tmp/x01e24d3638ca18/stdout","/ocpu/tmp/x01e24d3638ca18/source","/ocpu/tmp/x01e24d3638ca18/console","/ocpu/tmp/x01e24d3638ca18/info","/ocpu/tmp/x01e24d3638ca18/files/DESCRIPTION",""]}
+Processed output: {"randomWalk":{"steps":[-0.5605,-0.2302,1.5587,0.0705,0.1293,1.7151,0.4609,-1.2651,-0.6869,-0.4457,1.2241,0.3598,0.4008,0.1107,-0.5558,1.7869,0.4979,-1.9666,0.7014,-0.4728,-1.0678,-0.218,-1.026,-0.7289,-0.625,-1.6867,0.8378,0.1534,-1.1381,1.2538,0.4265,-0.2951,0.8951,0.8781,0.8216,0.6886,0.5539,-0.0619,-0.306,-0.3805,-0.6947,-0.2079,-1.2654,2.169,1.208,-1.1231,-0.4029,-0.4667,0.78,-0.0834,0.2533,-0.0285,-0.0429,1.3686,-0.2258,1.5165,-1.5488,0.5846,0.1239,0.2159,0.3796,-0.5023,-0.3332,-1.0186,-1.0718,0.3035,0.4482,0.053,0.9223,2.0501,-0.491,-2.3092,1.0057,-0.7092,-0.688,1.0256,-0.2848,-1.2207,0.1813,-0.1389,0.0058,0.3853,-0.3707,0.6444,-0.2205,0.3318,1.0968,0.4352,-0.3259,1.1488,0.9935,0.5484,0.2387,-0.6279,1.3607,-0.6003,2.1873,1.5326,-0.2357,-1.0264],"position":[-0.5605,-0.7907,0.7681,0.8386,0.9679,2.6829,3.1438,1.8788,1.1919,0.7463,1.9703,2.3302,2.7309,2.8416,2.2858,4.0727,4.5705,2.6039,3.3053,2.8325,1.7647,1.5467,0.5207,-0.2082,-0.8333,-2.52,-1.6822,-1.5288,-2.6669,-1.4131,-0.9866,-1.2817,-0.3866,0.4915,1.3131,2.0018,2.5557,2.4938,2.1878,1.8073,1.1126,0.9047,-0.3607,1.8083,3.0162,1.8931,1.4902,1.0236,1.8035,1.7202,1.9735,1.9449,1.9021,3.2707,3.0449,4.5614,3.0126,3.5972,3.7211,3.937,4.3167,3.8144,3.4811,2.4626,1.3908,1.6943,2.1425,2.1955,3.1178,5.1679,4.6768,2.3677,3.3734,2.6642,1.9762,3.0018,2.717,1.4963,1.6776,1.5387,1.5445,1.9297,1.5591,2.2035,1.983,2.3148,3.4116,3.8468,3.5208,4.6696,5.6632,6.2115,6.4503,5.8224,7.183,6.5828,8.7701,10.3027,10.067,9.0406]},"console":"> do.call(what = function() {\n+     set.seed(123)\n+     n <- 100\n+     steps <- rnorm(n)\n+     position <- cumsum(steps)\n+     return(list(steps = steps, position = position))\n+ }, args = args)\nList of length  2 \n[steps]\n[position]","files":[]}
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"plotResult","rFunction":"\n    function() {\n      x <- 1:10\n      y <- x^2\n      plot(x, y, main=\"Square Function\")\n      return(list(x=x, y=y))\n    }\n  "}
+Prepared arguments: {}
+Calling opencpuR with rCode: 
+    function() {
+      x <- 1:10
+      y <- x^2
+      plot(x, y, main="Square Function")
+      return(list(x=x, y=y))
+    }
+  
+Raw result from OpenCPU: {"loc":"https://cloud.opencpu.org/ocpu/tmp/x0ffddfd8b3e015/","key":"x0ffddfd8b3e015","txt":"/ocpu/tmp/x0ffddfd8b3e015/R/.val\n/ocpu/tmp/x0ffddfd8b3e015/R/args\n/ocpu/tmp/x0ffddfd8b3e015/R/do.call\n/ocpu/tmp/x0ffddfd8b3e015/graphics/1\n/ocpu/tmp/x0ffddfd8b3e015/stdout\n/ocpu/tmp/x0ffddfd8b3e015/source\n/ocpu/tmp/x0ffddfd8b3e015/console\n/ocpu/tmp/x0ffddfd8b3e015/info\n/ocpu/tmp/x0ffddfd8b3e015/files/DESCRIPTION\n","output":["/ocpu/tmp/x0ffddfd8b3e015/R/.val","/ocpu/tmp/x0ffddfd8b3e015/R/args","/ocpu/tmp/x0ffddfd8b3e015/R/do.call","/ocpu/tmp/x0ffddfd8b3e015/graphics/1","/ocpu/tmp/x0ffddfd8b3e015/stdout","/ocpu/tmp/x0ffddfd8b3e015/source","/ocpu/tmp/x0ffddfd8b3e015/console","/ocpu/tmp/x0ffddfd8b3e015/info","/ocpu/tmp/x0ffddfd8b3e015/files/DESCRIPTION",""]}
+Processed output: {"plotResult":{"x":[1,2,3,4,5,6,7,8,9,10],"y":[1,4,9,16,25,36,49,64,81,100]},"console":"> do.call(what = function() {\n+     x <- 1:10\n+     y <- x^2\n+     plot(x, y, main = \"Square Function\")\n+     return(list(x = x, y = y))\n+ }, args = args)\n[[ plot ]]\nList of length  2 \n[x]\n[y]","files":[]}
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"errorResult","rFunction":"\n    function() {\n      stop(\"This is a deliberate error\")\n    }\n  "}
+Prepared arguments: {}
+Calling opencpuR with rCode: 
+    function() {
+      stop("This is a deliberate error")
+    }
+  
+Error executing R code: Error: HTTP error! status: 400, message: This is a deliberate error
+
+In call:
+(function () 
+{
+    stop("This is a deliberate error")
+})()
+
+Backtrace:
+    ▆
+ 1. └─base::eval(expr, envir, enclos)
+ 2.   └─base::eval(expr, envir, enclos)
+ 3.     ├─base::do.call(...)
+ 4.     └─`<fn>`()
+ 5.       └─base::stop("This is a deliberate error")
+
+    at OpenCPU.call (/Users/paulinooliveira/Documents/nextjs-chat/opencpu-wrapper/opencpu.ts:71:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeRCode (/Users/paulinooliveira/Documents/nextjs-chat/lib/r-execution.ts:47:20)
+    at async testErrorHandling (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:76:20)
+    at async runTests (/Users/paulinooliveira/Documents/nextjs-chat/lib/test-r-execution.ts:115:3)
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"dataFrameResult","rFunction":"\n    function() {\n      df <- data.frame(\n        name = c(\"Alice\", \"Bob\", \"Charlie\"),\n        age = c(25, 30, 35),\n        height = c(165, 180, 175)\n      )\n      return(df)\n    }\n  "}
+Prepared arguments: {}
+Calling opencpuR with rCode: 
+    function() {
+      df <- data.frame(
+        name = c("Alice", "Bob", "Charlie"),
+        age = c(25, 30, 35),
+        height = c(165, 180, 175)
+      )
+      return(df)
+    }
+  
+Raw result from OpenCPU: {"loc":"https://cloud.opencpu.org/ocpu/tmp/x0015334e3833e2/","key":"x0015334e3833e2","txt":"/ocpu/tmp/x0015334e3833e2/R/.val\n/ocpu/tmp/x0015334e3833e2/R/args\n/ocpu/tmp/x0015334e3833e2/R/do.call\n/ocpu/tmp/x0015334e3833e2/stdout\n/ocpu/tmp/x0015334e3833e2/source\n/ocpu/tmp/x0015334e3833e2/console\n/ocpu/tmp/x0015334e3833e2/info\n/ocpu/tmp/x0015334e3833e2/files/DESCRIPTION\n","output":["/ocpu/tmp/x0015334e3833e2/R/.val","/ocpu/tmp/x0015334e3833e2/R/args","/ocpu/tmp/x0015334e3833e2/R/do.call","/ocpu/tmp/x0015334e3833e2/stdout","/ocpu/tmp/x0015334e3833e2/source","/ocpu/tmp/x0015334e3833e2/console","/ocpu/tmp/x0015334e3833e2/info","/ocpu/tmp/x0015334e3833e2/files/DESCRIPTION",""]}
+Processed output: {"dataFrameResult":[{"name":"Alice","age":25,"height":165},{"name":"Bob","age":30,"height":180},{"name":"Charlie","age":35,"height":175}],"console":"> do.call(what = function() {\n+     df <- data.frame(name = c(\"Alice\", \"Bob\", \"Charlie\"), age = c(25, \n+         30, 35), height = c(165, 180, 175))\n+     return(df)\n+ }, args = args)\n     name age height\n1   Alice  25    165\n2     Bob  30    180\n3 Charlie  35    175","files":[]}
+OpenCPU wrapper initialized with custom base URL
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      plot(1:n, position, type=\"l\", main=\"Random Walk\", xlab=\"Step\", ylab=\"Position\")\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared arguments: {}
+Calling opencpuR with rCode: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      plot(1:n, position, type="l", main="Random Walk", xlab="Step", ylab="Position")
+      return(list(steps = steps, position = position))
+    }
+  
+Raw result from OpenCPU: {"loc":"https://cloud.opencpu.org/ocpu/tmp/x03c7cd073f74cd/","key":"x03c7cd073f74cd","txt":"/ocpu/tmp/x03c7cd073f74cd/R/.val\n/ocpu/tmp/x03c7cd073f74cd/R/args\n/ocpu/tmp/x03c7cd073f74cd/R/do.call\n/ocpu/tmp/x03c7cd073f74cd/graphics/1\n/ocpu/tmp/x03c7cd073f74cd/stdout\n/ocpu/tmp/x03c7cd073f74cd/source\n/ocpu/tmp/x03c7cd073f74cd/console\n/ocpu/tmp/x03c7cd073f74cd/info\n/ocpu/tmp/x03c7cd073f74cd/files/DESCRIPTION\n","output":["/ocpu/tmp/x03c7cd073f74cd/R/.val","/ocpu/tmp/x03c7cd073f74cd/R/args","/ocpu/tmp/x03c7cd073f74cd/R/do.call","/ocpu/tmp/x03c7cd073f74cd/graphics/1","/ocpu/tmp/x03c7cd073f74cd/stdout","/ocpu/tmp/x03c7cd073f74cd/source","/ocpu/tmp/x03c7cd073f74cd/console","/ocpu/tmp/x03c7cd073f74cd/info","/ocpu/tmp/x03c7cd073f74cd/files/DESCRIPTION",""]}
+Processed output: {"randomWalk":{"steps":[-0.5605,-0.2302,1.5587,0.0705,0.1293,1.7151,0.4609,-1.2651,-0.6869,-0.4457,1.2241,0.3598,0.4008,0.1107,-0.5558,1.7869,0.4979,-1.9666,0.7014,-0.4728,-1.0678,-0.218,-1.026,-0.7289,-0.625,-1.6867,0.8378,0.1534,-1.1381,1.2538,0.4265,-0.2951,0.8951,0.8781,0.8216,0.6886,0.5539,-0.0619,-0.306,-0.3805,-0.6947,-0.2079,-1.2654,2.169,1.208,-1.1231,-0.4029,-0.4667,0.78,-0.0834,0.2533,-0.0285,-0.0429,1.3686,-0.2258,1.5165,-1.5488,0.5846,0.1239,0.2159,0.3796,-0.5023,-0.3332,-1.0186,-1.0718,0.3035,0.4482,0.053,0.9223,2.0501,-0.491,-2.3092,1.0057,-0.7092,-0.688,1.0256,-0.2848,-1.2207,0.1813,-0.1389,0.0058,0.3853,-0.3707,0.6444,-0.2205,0.3318,1.0968,0.4352,-0.3259,1.1488,0.9935,0.5484,0.2387,-0.6279,1.3607,-0.6003,2.1873,1.5326,-0.2357,-1.0264],"position":[-0.5605,-0.7907,0.7681,0.8386,0.9679,2.6829,3.1438,1.8788,1.1919,0.7463,1.9703,2.3302,2.7309,2.8416,2.2858,4.0727,4.5705,2.6039,3.3053,2.8325,1.7647,1.5467,0.5207,-0.2082,-0.8333,-2.52,-1.6822,-1.5288,-2.6669,-1.4131,-0.9866,-1.2817,-0.3866,0.4915,1.3131,2.0018,2.5557,2.4938,2.1878,1.8073,1.1126,0.9047,-0.3607,1.8083,3.0162,1.8931,1.4902,1.0236,1.8035,1.7202,1.9735,1.9449,1.9021,3.2707,3.0449,4.5614,3.0126,3.5972,3.7211,3.937,4.3167,3.8144,3.4811,2.4626,1.3908,1.6943,2.1425,2.1955,3.1178,5.1679,4.6768,2.3677,3.3734,2.6642,1.9762,3.0018,2.717,1.4963,1.6776,1.5387,1.5445,1.9297,1.5591,2.2035,1.983,2.3148,3.4116,3.8468,3.5208,4.6696,5.6632,6.2115,6.4503,5.8224,7.183,6.5828,8.7701,10.3027,10.067,9.0406]},"console":"> do.call(what = function() {\n+     set.seed(123)\n+     n <- 100\n+     steps <- rnorm(n)\n+     position <- cumsum(steps)\n+     plot(1:n, position, type = \"l\", main = \"Random Walk\", xlab = \"Step\", \n+         ylab = \"Position\")\n+     return(list(steps = steps, position = position))\n+ }, args = args)\n[[ plot ]]\nList of length  2 \n[steps]\n[position]","files":[]}
+executeRCode started
+Executing R code with input: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      plot(1:n, position, type=\"l\", main=\"Random Walk\", xlab=\"Step\", ylab=\"Position\")\n      return(list(steps = steps, position = position))\n    }\n  "}
+Prepared arguments: {}
+Calling opencpuR with rCode: 
+    function() {
+      set.seed(123)  # for reproducibility
+      n <- 100
+      steps <- rnorm(n)
+      position <- cumsum(steps)
+      plot(1:n, position, type="l", main="Random Walk", xlab="Step", ylab="Position")
+      return(list(steps = steps, position = position))
+    }
+  
+Raw result from OpenCPU: {"loc":"https://cloud.opencpu.org/ocpu/tmp/x03c7cd073f74cd/","key":"x03c7cd073f74cd","txt":"/ocpu/tmp/x03c7cd073f74cd/R/.val\n/ocpu/tmp/x03c7cd073f74cd/R/args\n/ocpu/tmp/x03c7cd073f74cd/R/do.call\n/ocpu/tmp/x03c7cd073f74cd/graphics/1\n/ocpu/tmp/x03c7cd073f74cd/stdout\n/ocpu/tmp/x03c7cd073f74cd/source\n/ocpu/tmp/x03c7cd073f74cd/console\n/ocpu/tmp/x03c7cd073f74cd/info\n/ocpu/tmp/x03c7cd073f74cd/files/DESCRIPTION\n","output":["/ocpu/tmp/x03c7cd073f74cd/R/.val","/ocpu/tmp/x03c7cd073f74cd/R/args","/ocpu/tmp/x03c7cd073f74cd/R/do.call","/ocpu/tmp/x03c7cd073f74cd/graphics/1","/ocpu/tmp/x03c7cd073f74cd/stdout","/ocpu/tmp/x03c7cd073f74cd/source","/ocpu/tmp/x03c7cd073f74cd/console","/ocpu/tmp/x03c7cd073f74cd/info","/ocpu/tmp/x03c7cd073f74cd/files/DESCRIPTION",""]}
+Processed output: {"randomWalk":{"steps":[-0.5605,-0.2302,1.5587,0.0705,0.1293,1.7151,0.4609,-1.2651,-0.6869,-0.4457,1.2241,0.3598,0.4008,0.1107,-0.5558,1.7869,0.4979,-1.9666,0.7014,-0.4728,-1.0678,-0.218,-1.026,-0.7289,-0.625,-1.6867,0.8378,0.1534,-1.1381,1.2538,0.4265,-0.2951,0.8951,0.8781,0.8216,0.6886,0.5539,-0.0619,-0.306,-0.3805,-0.6947,-0.2079,-1.2654,2.169,1.208,-1.1231,-0.4029,-0.4667,0.78,-0.0834,0.2533,-0.0285,-0.0429,1.3686,-0.2258,1.5165,-1.5488,0.5846,0.1239,0.2159,0.3796,-0.5023,-0.3332,-1.0186,-1.0718,0.3035,0.4482,0.053,0.9223,2.0501,-0.491,-2.3092,1.0057,-0.7092,-0.688,1.0256,-0.2848,-1.2207,0.1813,-0.1389,0.0058,0.3853,-0.3707,0.6444,-0.2205,0.3318,1.0968,0.4352,-0.3259,1.1488,0.9935,0.5484,0.2387,-0.6279,1.3607,-0.6003,2.1873,1.5326,-0.2357,-1.0264],"position":[-0.5605,-0.7907,0.7681,0.8386,0.9679,2.6829,3.1438,1.8788,1.1919,0.7463,1.9703,2.3302,2.7309,2.8416,2.2858,4.0727,4.5705,2.6039,3.3053,2.8325,1.7647,1.5467,0.5207,-0.2082,-0.8333,-2.52,-1.6822,-1.5288,-2.6669,-1.4131,-0.9866,-1.2817,-0.3866,0.4915,1.3131,2.0018,2.5557,2.4938,2.1878,1.8073,1.1126,0.9047,-0.3607,1.8083,3.0162,1.8931,1.4902,1.0236,1.8035,1.7202,1.9735,1.9449,1.9021,3.2707,3.0449,4.5614,3.0126,3.5972,3.7211,3.937,4.3167,3.8144,3.4811,2.4626,1.3908,1.6943,2.1425,2.1955,3.1178,5.1679,4.6768,2.3677,3.3734,2.6642,1.9762,3.0018,2.717,1.4963,1.6776,1.5387,1.5445,1.9297,1.5591,2.2035,1.983,2.3148,3.4116,3.8468,3.5208,4.6696,5.6632,6.2115,6.4503,5.8224,7.183,6.5828,8.7701,10.3027,10.067,9.0406]},"console":"> do.call(what = function() {\n+     set.seed(123)\n+     n <- 100\n+     steps <- rnorm(n)\n+     position <- cumsum(steps)\n+     plot(1:n, position, type = \"l\", main = \"Random Walk\", xlab = \"Step\", \n+         ylab = \"Position\")\n+     return(list(steps = steps, position = position))\n+ }, args = args)\n[[ plot ]]\nList of length  2 \n[steps]\n[position]","files":[]}

@@ -1,0 +1,222 @@
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 400, message: object 'R' not found\n\nIn call:\nget(reqobject, paste(\"package\", reqpackage, sep = \":\"), inherits = FALSE)","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 400, message: object 'R' not found\n\nIn call:\nget(reqobject, paste(\"package\", reqpackage, sep = \":\"), inherits = FALSE)","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 400, message: object 'R' not found\n\nIn call:\nget(reqobject, paste(\"package\", reqpackage, sep = \":\"), inherits = FALSE)","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 400, message: object 'R' not found\n\nIn call:\nget(reqobject, paste(\"package\", reqpackage, sep = \":\"), inherits = FALSE)","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        tryCatch({\\n          \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n        }, error = function(e) {\\n          stop(paste(\"R Error:\", e$message))\\n        })\\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 400, message: could not find function \"\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    \"\n\nIn call:\n`\\n      function() {\\n        \\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \\n      }\\n    `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 400, message: could not find function \"\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \"\n\nIn call:\n`\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 400, message: could not find function \"\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \"\n\nIn call:\n`\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 400, message: could not find function \"\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \"\n\nIn call:\n`\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 400, message: could not find function \"\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  \"\n\nIn call:\n`\\n    function() {\\n      set.seed(123)  # for reproducibility\\n      n <- 100\\n      steps <- rnorm(n)\\n      position <- cumsum(steps)\\n      return(list(steps = steps, position = position))\\n    }\\n  `()\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     ├─base::do.call(what = do.call, args = args)\n 4.     └─base (local) `<fn>`(...)\n","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 400, message: 'what' must be a function or character string\n\nIn call:\ndo.call(what = {\n    set.seed(123)\n    n <- 100\n    steps <- rnorm(n)\n    position <- cumsum(steps)\n    list(steps = steps, position = position)\n}, args = args)\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     └─base::do.call(...)\n","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 400, message: 'what' must be a function or character string\n\nIn call:\ndo.call(what = {\n    set.seed(123)\n    n <- 100\n    steps <- rnorm(n)\n    position <- cumsum(steps)\n    list(steps = steps, position = position)\n}, args = args)\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     └─base::do.call(...)\n","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      return(list(steps = steps, position = position))\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    set.seed(123)  # for reproducibility\n    n <- 100\n    steps <- rnorm(n)\n    position <- cumsum(steps)\n    list(steps = steps, position = position)\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 400, message: 'what' must be a function or character string\n\nIn call:\ndo.call(what = {\n    set.seed(123)\n    n <- 100\n    steps <- rnorm(n)\n    position <- cumsum(steps)\n    list(steps = steps, position = position)\n}, args = args)\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     └─base::do.call(...)\n","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 400, message: 'what' must be a function or character string\n\nIn call:\ndo.call(what = {\n    set.seed(123)\n    n <- 100\n    steps <- rnorm(n)\n    position <- cumsum(steps)\n    list(steps = steps, position = position)\n}, args = args)\n\nBacktrace:\n    ▆\n 1. └─base::eval(expr, envir, enclos)\n 2.   └─base::eval(expr, envir, enclos)\n 3.     └─base::do.call(...)\n","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed
+API route handler started
+Input prepared: {"inputVariableNames":[],"files":[],"outputVariableName":"randomWalk","rFunction":"\n    function() {\n      set.seed(123)  # for reproducibility\n      n <- 100\n      steps <- rnorm(n)\n      position <- cumsum(steps)\n      list(steps = steps, position = position)\n    }\n  "}
+Executing R code...
+Execution result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+Parsed result: {"error":"OpenCPU error: HTTP error! status: 404","details":{}}
+API route handler completed

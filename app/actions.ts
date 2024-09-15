@@ -20,22 +20,18 @@ export async function getChats(userId?: string | null) {
     }
   }
 
-  try {
-    const pipeline = kv.pipeline()
-    const chats: string[] = await kv.zrange(`user:chat:${userId}`, 0, -1, {
-      rev: true
-    })
+  const pipeline = kv.pipeline()
+  const chats: string[] = await kv.zrange(`user:chat:${userId}`, 0, -1, {
+    rev: true
+  })
 
-    for (const chat of chats) {
-      pipeline.hgetall(chat)
-    }
-
-    const results = await pipeline.exec()
-
-    return results as Chat[]
-  } catch (error) {
-    return []
+  for (const chat of chats) {
+    pipeline.hgetall(chat)
   }
+
+  const results = await pipeline.exec()
+
+  return results as Chat[]
 }
 
 export async function getChat(id: string, userId: string) {
@@ -65,7 +61,6 @@ export async function removeChat({ id, path }: { id: string; path: string }) {
     }
   }
 
-  // Convert uid to string for consistent comparison with session.user.id
   const uid = String(await kv.hget(`chat:${id}`, 'userId'))
 
   if (uid !== session?.user?.id) {

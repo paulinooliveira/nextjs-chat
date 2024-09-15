@@ -24,8 +24,12 @@ export async function generateMetadata({
 
   const chat = await getChat(params.id, session.user.id)
 
-  if (!chat || 'error' in chat) {
+  if (!chat) {
     redirect('/')
+  } else if ('error' in chat) {
+    return {
+      title: 'Error'
+    }
   } else {
     return {
       title: chat?.title.toString().slice(0, 50) ?? 'Chat'
@@ -44,8 +48,18 @@ export default async function ChatPage({ params }: ChatPageProps) {
   const userId = session.user.id as string
   const chat = await getChat(params.id, userId)
 
-  if (!chat || 'error' in chat) {
+  if (!chat) {
     redirect('/')
+  } else if ('error' in chat) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen py-2">
+        <h1 className="text-4xl font-bold mb-4">Error</h1>
+        <p className="text-xl mb-4">{chat.error}</p>
+        <a href="/" className="text-blue-500 hover:text-blue-700">
+          Return to Home
+        </a>
+      </div>
+    )
   } else {
     if (chat?.userId !== session?.user?.id) {
       notFound()
