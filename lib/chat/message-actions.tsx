@@ -11,6 +11,7 @@ import { z } from 'zod'
 import { BotMessage, SystemMessage } from '@/components/stocks/message'
 import { nanoid } from 'nanoid'
 import { executeRCode, parseRResult } from '../r-execution'
+import RCodeOutput from '@/components/r-code-output'
 
 export async function submitUserMessage(content: string) {
   'use server'
@@ -218,7 +219,14 @@ function({{inputVariableNames salvas previamente, se houver}}) {
             ]
           })
           return (
-            <BotMessage content={`Executed R code and stored the result in ${outputVariableName}. Result: ${JSON.stringify(parsedResult)}`} />
+            <>
+            <BotMessage content={codeDescription}/>
+            <RCodeOutput
+              rCode={rFunction}
+              result={parsedResult}
+              outputVariableName={outputVariableName}
+            />
+            </>
           )
         }
       }
