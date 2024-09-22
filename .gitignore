@@ -38,3 +38,9 @@ yarn-error.log*
 .env*.local
 dist/
 r-execution-log.txt
+
+# references for AI
+docsVercelAi/
+
+# logs
+r-execution-log.txt

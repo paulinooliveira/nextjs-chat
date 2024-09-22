@@ -1,7 +1,6 @@
 'use client'
 
 import * as React from 'react'
-import { type DialogProps } from '@radix-ui/react-dialog'
 import { toast } from 'sonner'
 
 import { ServerActionResult, type Chat } from '@/lib/types'
@@ -17,17 +16,20 @@ import {
 import { IconSpinner } from '@/components/ui/icons'
 import { useCopyToClipboard } from '@/lib/hooks/use-copy-to-clipboard'
 
-interface ChatShareDialogProps extends DialogProps {
+interface ChatShareDialogProps {
   chat: Pick<Chat, 'id' | 'title' | 'messages'>
   shareChat: (id: string) => ServerActionResult<Chat>
   onCopy: () => void
+  open: boolean
+  onOpenChange: (open: boolean) => void
 }
 
 export function ChatShareDialog({
   chat,
   shareChat,
   onCopy,
-  ...props
+  open,
+  onOpenChange
 }: ChatShareDialogProps) {
   const { copyToClipboard } = useCopyToClipboard({ timeout: 1000 })
   const [isSharePending, startShareTransition] = React.useTransition()
@@ -48,7 +50,7 @@ export function ChatShareDialog({
   )
 
   return (
-    <Dialog {...props}>
+    <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Share link to chat</DialogTitle>
@@ -66,7 +68,6 @@ export function ChatShareDialog({
           <Button
             disabled={isSharePending}
             onClick={() => {
-              // @ts-ignore
               startShareTransition(async () => {
                 const result = await shareChat(chat.id)
 
