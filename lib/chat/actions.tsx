@@ -12,6 +12,7 @@ import { createD3Chart } from '@/lib/functions/d3-charts';
 import { createLeafletMap } from '@/lib/functions/leaflet-maps';
 import { performWebScraping } from '@/lib/functions/web-scraping';
 import { processData } from '@/lib/functions/data-processing';
+import { nanoid } from 'nanoid';
 
 export interface AIState {
   messages: AIMessage[];
@@ -23,17 +24,17 @@ export interface UIState {
 
 export const AI = createAI({
   actions: {
-    submitUserMessage: async function* (content: string) {
+    submitUserMessage: async (content: string): Promise<void> => {
       const aiState = getMutableAIState<AIState>();
-      aiState.update((draft) => {
+      aiState.update((draft: AIState) => {
         draft.messages.push({
-          id: crypto.randomUUID(),
+          id: nanoid(),
           role: 'user',
           content,
         });
       });
 
-      const result = await streamUI({
+      await streamUI({
         model: openai('gpt-4-turbo'),
         messages: [
           ...aiState.get().messages,
@@ -41,9 +42,9 @@ export const AI = createAI({
         ],
         text: ({ content, done }) => {
           if (done) {
-            aiState.update((draft) => {
+            aiState.update((draft: AIState) => {
               draft.messages.push({
-                id: crypto.randomUUID(),
+                id: nanoid(),
                 role: 'assistant',
                 content,
               });
@@ -55,28 +56,37 @@ export const AI = createAI({
           executeR: {
             description: 'Execute R code',
             parameters: z.object({ code: z.string() }),
-            generate: async function* ({ code }) {
-              yield <BotMessage content="Executing R code..." />;
+            generate: async ({ code }): Promise<ReactNode> => {
               const result = await executeRCode(code);
-              aiState.update((draft) => {
+              const parsedResult = JSON.parse(result);
+              
+              if (parsedResult.error) {
+                throw new Error(parsedResult.error);
+              }
+
+              const outputVariableName = Object.keys(parsedResult).find(key => key !== 'console' && key !== 'files');
+              const rOutput = outputVariableName ? parsedResult[outputVariableName] : 'No output';
+
+              const content = `R Execution Result:\n${JSON.stringify(rOutput, null, 2)}\n\nConsole Output:\n${parsedResult.console}\n\nFiles Processed:\n${parsedResult.files}`;
+
+              aiState.update((draft: AIState) => {
                 draft.messages.push({
-                  id: crypto.randomUUID(),
+                  id: nanoid(),
                   role: 'assistant',
-                  content: `R code executed: ${result}`,
+                  content,
                 });
               });
-              return <BotMessage content={result} />;
+              return <BotMessage content={content} />;
             },
           },
           createVegaLiteChart: {
             description: 'Create a Vega-Lite chart',
             parameters: z.object({ spec: z.any() }),
-            generate: async function* ({ spec }) {
-              yield <BotMessage content="Creating Vega-Lite chart..." />;
+            generate: async ({ spec }): Promise<ReactNode> => {
               const result = await createVegaLiteChart(spec);
-              aiState.update((draft) => {
+              aiState.update((draft: AIState) => {
                 draft.messages.push({
-                  id: crypto.randomUUID(),
+                  id: nanoid(),
                   role: 'assistant',
                   content: 'Vega-Lite chart created',
                 });
@@ -87,12 +97,11 @@ export const AI = createAI({
           createD3Chart: {
             description: 'Create a D3 chart',
             parameters: z.object({ data: z.any() }),
-            generate: async function* ({ data }) {
-              yield <BotMessage content="Creating D3 chart..." />;
+            generate: async ({ data }): Promise<ReactNode> => {
               const result = await createD3Chart(data);
-              aiState.update((draft) => {
+              aiState.update((draft: AIState) => {
                 draft.messages.push({
-                  id: crypto.randomUUID(),
+                  id: nanoid(),
                   role: 'assistant',
                   content: 'D3 chart created',
                 });
@@ -103,12 +112,11 @@ export const AI = createAI({
           createLeafletMap: {
             description: 'Create a Leaflet map',
             parameters: z.object({ mapData: z.any() }),
-            generate: async function* ({ mapData }) {
-              yield <BotMessage content="Creating Leaflet map..." />;
+            generate: async ({ mapData }): Promise<ReactNode> => {
               const result = await createLeafletMap(mapData);
-              aiState.update((draft) => {
+              aiState.update((draft: AIState) => {
                 draft.messages.push({
-                  id: crypto.randomUUID(),
+                  id: nanoid(),
                   role: 'assistant',
                   content: 'Leaflet map created',
                 });
@@ -119,12 +127,11 @@ export const AI = createAI({
           performWebScraping: {
             description: 'Perform web scraping',
             parameters: z.object({ url: z.string() }),
-            generate: async function* ({ url }) {
-              yield <BotMessage content="Performing web scraping..." />;
+            generate: async ({ url }): Promise<ReactNode> => {
               const result = await performWebScraping(url);
-              aiState.update((draft) => {
+              aiState.update((draft: AIState) => {
                 draft.messages.push({
-                  id: crypto.randomUUID(),
+                  id: nanoid(),
                   role: 'assistant',
                   content: `Web scraping performed on ${url}`,
                 });
@@ -135,12 +142,11 @@ export const AI = createAI({
           processData: {
             description: 'Process data',
             parameters: z.object({ data: z.any() }),
-            generate: async function* ({ data }) {
-              yield <BotMessage content="Processing data..." />;
+            generate: async ({ data }): Promise<ReactNode> => {
               const result = await processData(data);
-              aiState.update((draft) => {
+              aiState.update((draft: AIState) => {
                 draft.messages.push({
-                  id: crypto.randomUUID(),
+                  id: nanoid(),
                   role: 'assistant',
                   content: 'Data processed',
                 });
@@ -150,8 +156,6 @@ export const AI = createAI({
           },
         },
       });
-
-      yield result.value;
     },
   },
   initialAIState: {
@@ -163,3 +167,11 @@ export const AI = createAI({
 });
 
 export type AI = typeof AI;
+
+export function getUIStateFromAIState(aiState: AIState): UIState {
+  return {
+    messages: aiState.messages,
+  };
+}
+
+export { executeRCode, createVegaLiteChart, createD3Chart };
